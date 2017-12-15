@@ -149,7 +149,6 @@
 		2D3323D81FCC4DF200DA53A9 /* WBViews */ = {
 			isa = PBXGroup;
 			children = (
-				2D3324111FCC545600DA53A9 /* WBWebSocket */,
 				2D33240B1FCC528600DA53A9 /* WBReloadScroll */,
 				2D33240A1FCC525D00DA53A9 /* Widges */,
 				2D3324031FCC51B000DA53A9 /* WBFlyClip */,
@@ -182,6 +181,7 @@
 		2D3323DF1FCC506100DA53A9 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				2D3324111FCC545600DA53A9 /* WBWebSocket */,
 				2D3323F21FCC512100DA53A9 /* WBUrlInitController */,
 				2D3323E91FCC50BA00DA53A9 /* WBRoute */,
 				2D3323E01FCC509300DA53A9 /* WBMessageRequestHelper */,
