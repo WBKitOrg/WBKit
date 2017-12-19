@@ -20,8 +20,30 @@
 #define NSLog(...)
 #endif
 
+#define iOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define iOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define iOS6 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
 
-//适配iphone6 以及plus 的屏幕设置两个参数
+#define isPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad   ? YES : NO)
+#define isPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? YES : NO)
+#define isRetina ([[UIScreen mainScreen] scale] > 1 ? YES : NO)
+
+#ifndef IS_IPHONE_X
+#define IS_IPHONE_X                 (fabs(MAX(kScreenWidth, kScreenHeight) - 812) < DBL_EPSILON)
+#endif
+
+#ifndef kNavigationBarHeight
+#define kNavigationBarHeight        (IS_IPHONE_X ? (kScreenWidth > kScreenHeight ? 32 : 88) : 64)
+#endif
+
+#ifndef kUINavigationBarHeight
+#define kUINavigationBarHeight      ((IS_IPHONE_X && (kScreenWidth > kScreenHeight)) ? 32 : 44)
+#endif
+
+#ifndef kStatusBarHeight
+#define kStatusBarHeight            (IS_IPHONE_X?44:20)
+#endif
+
 #ifndef ScreenWidth
 #define ScreenWidth        ([UIScreen mainScreen].bounds.size.width)
 #endif
@@ -34,26 +56,9 @@
 #define ScreenSmallSide   ([[UIScreen mainScreen] bounds].size.height>[[UIScreen mainScreen] bounds].size.width ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 #endif
 
-#define iOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-#define iOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
-#define iOS6 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
-
-#define isPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad   ? YES : NO)
-#define isPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? YES : NO)
-#define isRetina ([[UIScreen mainScreen] scale] > 1 ? YES : NO)
-
-
 //键盘弹出动画
 #define IOSAnimationcurve (long)7
 #define IOSAnimationduration (double)0.25
-
-
-/**
- * 6.1 王博添加根据16进制数得到UIColor值
- */
-
-#define UIColorFromHexString(hexString,alphaValue) [UIColor colorWithRed:((float)((strtoul([[hexString hasPrefix:@"0x"]?[hexString substringFromIndex:2]:hexString UTF8String],0,16) & 0xFF0000) >> 16))/255.0  green:((float)((strtoul([[hexString hasPrefix:@"0x"]?[hexString substringFromIndex:2]:hexString UTF8String],0,16) & 0x00FF00) >> 8))/255.0  blue:((float)(strtoul([[hexString hasPrefix:@"0x"]?[hexString substringFromIndex:2]:hexString UTF8String],0,16) & 0x0000FF))/255.0  alpha:(alphaValue)]
-
 
 
 #endif
