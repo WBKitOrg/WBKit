@@ -15,6 +15,7 @@
 		2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */; };
 		2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */; };
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
+		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
 		2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,8 @@
 		2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WBAdditions.m"; sourceTree = "<group>"; };
 		2D3324291FCFAE8800DA53A9 /* UIImage+maskCut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+maskCut.h"; sourceTree = "<group>"; };
 		2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+maskCut.m"; sourceTree = "<group>"; };
+		2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+WBAdditions.h"; sourceTree = "<group>"; };
+		2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WBAdditions.m"; sourceTree = "<group>"; };
 		2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SaveToDisk.h"; sourceTree = "<group>"; };
 		2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SaveToDisk.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +322,8 @@
 				2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */,
 				2D3324261FCFA93C00DA53A9 /* UIColor+WBAdditions.h */,
 				2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */,
+				2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */,
+				2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */,
 			);
 			path = "Foundation+";
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */,
 				2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */,
 				2D3324221FCFA5F300DA53A9 /* UILabel+htmlString.m in Sources */,
+				2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */,
 				2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */,
 				2D3324251FCFA6E100DA53A9 /* NSString+DecodingXMLEntities.m in Sources */,
 			);
@@ -442,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -491,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
