@@ -1,6 +1,9 @@
 # WBKit
 WBKit IOS framework
 
+2017.12.26
+增加了mutablearray的unretain初始化方法
+
 2017.12.25
 增加了nsdate的扩展方法
 
