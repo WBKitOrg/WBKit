@@ -17,6 +17,7 @@
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
 		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
 		2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */; };
+		2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,8 @@
 		2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WBAdditions.m"; sourceTree = "<group>"; };
 		2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SaveToDisk.h"; sourceTree = "<group>"; };
 		2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SaveToDisk.m"; sourceTree = "<group>"; };
+		2DBB21531FF21BDA00687B53 /* NSMutableArray+Unretain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Unretain.h"; sourceTree = "<group>"; };
+		2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Unretain.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +319,8 @@
 				2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */,
 				2D3323E71FCC50A800DA53A9 /* NSDictionary+MutableCopy.h */,
 				2D3323E51FCC50A800DA53A9 /* NSDictionary+MutableCopy.m */,
+				2DBB21531FF21BDA00687B53 /* NSMutableArray+Unretain.h */,
+				2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */,
 				2D3323E61FCC50A800DA53A9 /* NSObject+PropertyListing.h */,
 				2D3323E81FCC50A800DA53A9 /* NSObject+PropertyListing.m */,
 				2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */,
@@ -392,6 +397,7 @@
 				2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */,
 				2D3324221FCFA5F300DA53A9 /* UILabel+htmlString.m in Sources */,
 				2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */,
+				2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */,
 				2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */,
 				2D3324251FCFA6E100DA53A9 /* NSString+DecodingXMLEntities.m in Sources */,
 			);
