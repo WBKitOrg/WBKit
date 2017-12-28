@@ -8,8 +8,6 @@
 
 #ifndef WBHeader_h
 #define WBHeader_h
-
-
 #endif /* WBHeader_h */
 
 #ifdef __OBJC__
