@@ -15,7 +15,10 @@
 
 #import "NSDictionary+MutableCopy.h"
 
+#import "NSMutableArray+Unretain.h"
+
 #import "NSObject+PropertyListing.h"
+#import "NSObject+SaveToDisk.h"
 
 #import "UIColor+WBAdditions.h"
 
@@ -36,8 +39,11 @@
 #import "WBWebViewController.h"
 #import "UIViewController+WBUrlInit.h"
 #import "WBNavigationController.h"
-#import "WBURLRoute.h"
 #import "NSObject+MessageRequest.h"
+#import "WBURLRoute.h"
+#import "WBService.h"
+#import "WBModule.h"
+#import "WBModuleManager.h"
 
 #import "WBAppHelper.h"
 #import "WBGCD.h"

@@ -19,6 +19,31 @@
 		2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */; };
 		2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */; };
 		2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD82541FF3C80B004721DF /* WBModuleManager.m */; };
+		2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323DA1FCC4F4E00DA53A9 /* NSString+regexDept.m */; };
+		2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E51FCC50A800DA53A9 /* NSDictionary+MutableCopy.m */; };
+		2DF1C58A1FF4F946007BB079 /* NSObject+PropertyListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E81FCC50A800DA53A9 /* NSObject+PropertyListing.m */; };
+		2DF1C58B1FF4F94E007BB079 /* UIViewController+WBLefeCircleEventManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F11FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.m */; };
+		2DF1C58C1FF4F951007BB079 /* UIImage+ClearImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323FC1FCC518900DA53A9 /* UIImage+ClearImage.m */; };
+		2DF1C58D1FF4F956007BB079 /* UIView+WBAnimationHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323FF1FCC518900DA53A9 /* UIView+WBAnimationHelp.m */; };
+		2DF1C58E1FF4F95C007BB079 /* WBReloadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33240C1FCC529B00DA53A9 /* WBReloadScrollView.m */; };
+		2DF1C58F1FF4F961007BB079 /* WBClipableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324051FCC51B000DA53A9 /* WBClipableViewController.m */; };
+		2DF1C5901FF4F963007BB079 /* UIViewController+WBFlyClip.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324071FCC51B000DA53A9 /* UIViewController+WBFlyClip.m */; };
+		2DF1C5911FF4F966007BB079 /* WBFlyClipManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324091FCC51B000DA53A9 /* WBFlyClipManager.m */; };
+		2DF1C5921FF4F986007BB079 /* WBCaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324021FCC519F00DA53A9 /* WBCaptureView.m */; };
+		2DF1C5931FF4F98A007BB079 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F91FCC515800DA53A9 /* FXBlurView.m */; };
+		2DF1C5941FF4F98C007BB079 /* UIView+WBBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323FB1FCC515800DA53A9 /* UIView+WBBlur.m */; };
+		2DF1C5951FF4F99A007BB079 /* WBWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324171FCC545600DA53A9 /* WBWebSocketMessage.m */; };
+		2DF1C5961FF4F99C007BB079 /* WBWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324151FCC545600DA53A9 /* WBWebSocketManager.m */; };
+		2DF1C5971FF4F99F007BB079 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324131FCC545600DA53A9 /* SRWebSocket.m */; };
+		2DF1C5981FF4F9A5007BB079 /* UIViewController+WBUrlInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F31FCC513E00DA53A9 /* UIViewController+WBUrlInit.m */; };
+		2DF1C5991FF4F9A7007BB079 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F61FCC513E00DA53A9 /* WBNavigationController.m */; };
+		2DF1C59A1FF4F9C2007BB079 /* WBURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EF1FCC50BA00DA53A9 /* WBURLRoute.m */; };
+		2DF1C59B1FF4F9FB007BB079 /* NSObject+MessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E21FCC509300DA53A9 /* NSObject+MessageRequest.m */; };
+		2DF1C59C1FF4FA19007BB079 /* WBMessageTransferStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E41FCC509300DA53A9 /* WBMessageTransferStation.m */; };
+		2DF1C59D1FF4FA1D007BB079 /* WBAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323ED1FCC50BA00DA53A9 /* WBAppHelper.m */; };
+		2DF1C59E1FF4FA20007BB079 /* WBGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323DC1FCC4F5E00DA53A9 /* WBGCD.m */; };
+		2DF1C5A01FF4FB26007BB079 /* WBHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3324181FCC550500DA53A9 /* WBHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF1C5A11FF4FB26007BB079 /* WBKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3323CE1FCC4DAA00DA53A9 /* WBKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -354,6 +379,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2DF1C59F1FF4FB14007BB079 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF1C5A01FF4FB26007BB079 /* WBHeader.h in Headers */,
+				2DF1C5A11FF4FB26007BB079 /* WBKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		2D3323CA1FCC4DAA00DA53A9 /* WBKit */ = {
 			isa = PBXNativeTarget;
@@ -362,6 +399,7 @@
 				2D3323C71FCC4DAA00DA53A9 /* Sources */,
 				2D3323C81FCC4DAA00DA53A9 /* Frameworks */,
 				2D3323C91FCC4DAA00DA53A9 /* CopyFiles */,
+				2DF1C59F1FF4FB14007BB079 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -410,16 +448,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */,
+				2DF1C5991FF4F9A7007BB079 /* WBNavigationController.m in Sources */,
+				2DF1C58A1FF4F946007BB079 /* NSObject+PropertyListing.m in Sources */,
 				2D3324101FCC52B300DA53A9 /* WBWebViewController.m in Sources */,
+				2DF1C59A1FF4F9C2007BB079 /* WBURLRoute.m in Sources */,
+				2DF1C5981FF4F9A5007BB079 /* UIViewController+WBUrlInit.m in Sources */,
 				2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */,
 				2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */,
+				2DF1C58F1FF4F961007BB079 /* WBClipableViewController.m in Sources */,
+				2DF1C59E1FF4FA20007BB079 /* WBGCD.m in Sources */,
+				2DF1C5921FF4F986007BB079 /* WBCaptureView.m in Sources */,
+				2DF1C58C1FF4F951007BB079 /* UIImage+ClearImage.m in Sources */,
+				2DF1C5931FF4F98A007BB079 /* FXBlurView.m in Sources */,
 				2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */,
+				2DF1C5911FF4F966007BB079 /* WBFlyClipManager.m in Sources */,
 				2D3324221FCFA5F300DA53A9 /* UILabel+htmlString.m in Sources */,
+				2DF1C5951FF4F99A007BB079 /* WBWebSocketMessage.m in Sources */,
+				2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */,
+				2DF1C5961FF4F99C007BB079 /* WBWebSocketManager.m in Sources */,
+				2DF1C58D1FF4F956007BB079 /* UIView+WBAnimationHelp.m in Sources */,
+				2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */,
 				2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */,
 				2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */,
+				2DF1C59B1FF4F9FB007BB079 /* NSObject+MessageRequest.m in Sources */,
 				2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */,
 				2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */,
+				2DF1C58E1FF4F95C007BB079 /* WBReloadScrollView.m in Sources */,
+				2DF1C59D1FF4FA1D007BB079 /* WBAppHelper.m in Sources */,
+				2DF1C59C1FF4FA19007BB079 /* WBMessageTransferStation.m in Sources */,
+				2DF1C5941FF4F98C007BB079 /* UIView+WBBlur.m in Sources */,
+				2DF1C58B1FF4F94E007BB079 /* UIViewController+WBLefeCircleEventManagement.m in Sources */,
+				2DF1C5971FF4F99F007BB079 /* SRWebSocket.m in Sources */,
 				2D3324251FCFA6E100DA53A9 /* NSString+DecodingXMLEntities.m in Sources */,
+				2DF1C5901FF4F963007BB079 /* UIViewController+WBFlyClip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
