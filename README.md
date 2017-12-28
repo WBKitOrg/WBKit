@@ -1,6 +1,8 @@
 # WBKit
 WBKit IOS framework
 -------------------------
+* 2017.12.28
+增加了对app模块化的支持类
 
 * 2017.12.26
 增加了 `NSMutableArray` 的unretain初始化方法
