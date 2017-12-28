@@ -34,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070065E61FF4AB6A0059B62E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2D3323CB1FCC4DAA00DA53A9 /* libWBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3323CE1FCC4DAA00DA53A9 /* WBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBKit.h; sourceTree = "<group>"; };
 		2D3323CF1FCC4DAA00DA53A9 /* WBKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBKit.m; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 			children = (
 				2D3323CD1FCC4DAA00DA53A9 /* WBKit */,
 				2D3323CC1FCC4DAA00DA53A9 /* Products */,
+				070065E61FF4AB6A0059B62E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
