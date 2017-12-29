@@ -1,0 +1,20 @@
+//
+//  WBKitDemoPrifixHeader.h
+//  WBKitDemo
+//
+//  Created by wangbo on 2017/12/29.
+//  Copyright © 2017年 wangbo. All rights reserved.
+//
+
+#ifndef WBKitDemoPrefixHeader_h
+#define WBKitDemoPrefixHeader_h
+
+
+#ifdef __OBJC__
+
+#import "WBKit.h"
+#import "WBHeader.h"
+
+#endif
+
+#endif /* WBKitDemoPrifixHeader_h */
