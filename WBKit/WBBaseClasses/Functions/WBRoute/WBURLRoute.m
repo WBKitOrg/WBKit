@@ -38,6 +38,7 @@
 {
     NSParameterAssert(handler && pattern.length > 0);
     
+    //TODO:暂时routeDic中的内容没用到，是增严格定义时使用的
     [[WBURLRoute sharedRoute].routeDic setObject:[pattern getURLParameters] forKey:[pattern getURLSchemHostPath]];
     [[WBURLRoute sharedRoute].handlerDic setObject:handler forKey:[pattern getURLSchemHostPath]];
 }
@@ -60,7 +61,10 @@
         
         WBRouteHandler handler = [[WBURLRoute sharedRoute].handlerDic valueForKey:key];
         
-        handler(params,callback);
+        NSMutableDictionary *urlParams = [NSMutableDictionary dictionaryWithDictionary:[url getURLParameters]];
+        [urlParams addEntriesFromDictionary:params];
+        
+        handler(urlParams,callback);
         
         return YES;
     }
