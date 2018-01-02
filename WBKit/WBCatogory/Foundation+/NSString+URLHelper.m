@@ -15,7 +15,7 @@
 {
     NSRange range = [self rangeOfString:@"?"];
     if (range.location == NSNotFound) {
-        return nil;
+        return self;
     }
     NSString *pathString = [self substringToIndex:range.location];
     return pathString;
@@ -27,13 +27,12 @@
  */
 - (NSMutableDictionary *)getURLParameters {
     
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
     // 查找参数
     NSRange range = [self rangeOfString:@"?"];
     if (range.location == NSNotFound) {
-        return nil;
+        return params;
     }
-    
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
     
     // 截取参数
     NSString *parametersString = [self substringFromIndex:range.location + 1];

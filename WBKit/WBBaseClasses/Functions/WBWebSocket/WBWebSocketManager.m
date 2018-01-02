@@ -6,7 +6,6 @@
 //
 
 #import "WBWebSocketManager.h"
-#import "XXSocketActionParser.h"
 
 @interface WBWebSocketManager()
 
@@ -226,11 +225,6 @@ static WBWebSocketManager * _sharedManager;
         self.DidRecieveMessage(message);
     }
     
-    //事件处理器单独处理
-    if (!self.delegate) {
-        //增加websocket的事件处理器
-        self.delegate = [XXSocketActionParser sharedActionParser];
-    }
     if ([self.delegate respondsToSelector:@selector(DidMessageNeedParse:)]) {
         [self.delegate DidMessageNeedParse:message];
     }
