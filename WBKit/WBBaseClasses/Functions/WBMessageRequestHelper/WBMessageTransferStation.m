@@ -55,8 +55,7 @@
 -(void)postMessage:(id)message from:(NSString *)fromId to:(NSString *)toId{
     
     for (NSString *respUrlStr in _registedRecievers.allKeys) {
-        NSURL *respUrl = [NSURL URLWithString:respUrlStr];
-        if ([respUrl.host isEqualToString:[NSURL URLWithString:toId].host]) {
+        if ([respUrlStr isEqualToString:toId]) {
             NSObject<WBMessageRequestCallbackDelegate> *req = [[_registedRecievers objectForKey:fromId] nonretainedObjectValue];
             NSObject<WBMessageRequestListener> *resp = [[_registedRecievers objectForKey:respUrlStr] nonretainedObjectValue];
             //是一个类,则发送消息
