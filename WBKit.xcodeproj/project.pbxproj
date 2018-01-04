@@ -60,6 +60,7 @@
 		2DBD7D371FF603A100D1A967 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D351FF6036100D1A967 /* libicucore.tbd */; };
 		2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */; };
 		2DC6E6B11FFE4776004BAB1B /* NSObject+IdentifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */; };
+		2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */; };
 		2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD82541FF3C80B004721DF /* WBModuleManager.m */; };
 		2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323DA1FCC4F4E00DA53A9 /* NSString+regexDept.m */; };
 		2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E51FCC50A800DA53A9 /* NSDictionary+MutableCopy.m */; };
@@ -184,6 +185,8 @@
 		2DBD7D351FF6036100D1A967 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+IdentifyHelper.h"; sourceTree = "<group>"; };
 		2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IdentifyHelper.m"; sourceTree = "<group>"; };
+		2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMessageListenner.h; sourceTree = "<group>"; };
+		2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMessageListenner.m; sourceTree = "<group>"; };
 		2DCD824F1FF3C767004721DF /* WBModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModule.h; sourceTree = "<group>"; };
 		2DCD82501FF3C798004721DF /* WBService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBService.h; sourceTree = "<group>"; };
 		2DCD82531FF3C80B004721DF /* WBModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModuleManager.h; sourceTree = "<group>"; };
@@ -418,6 +421,8 @@
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
 				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
 				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
+				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
+				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
 				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
 				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
 				2DBD7D1B1FF5EC1000D1A967 /* Main.storyboard */,
@@ -625,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */,
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
 				2DBD7D2B1FF5EC4F00D1A967 /* DemoModule.m in Sources */,
