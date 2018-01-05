@@ -13,7 +13,7 @@
  *  接收事件通知方法
  */
 @required
--(void)WB_listenRequest:(id)requestParams response:(void(^)(id responseParams))responseBlock;
+-(void)listenRequest:(id)requestParams response:(void(^)(id responseParams))responseBlock;
 @end
 
 @protocol WBMessageRequestCallbackDelegate <NSObject>
@@ -21,18 +21,16 @@
  *  请求回调函数
  */
 @optional
-- (void (^)(id))WB_NeedCompish;//获取请求的回调
-- (void)setWB_NeedCompish:(void (^)(id))NeedCompish;//设置请求的回调
+- (void (^)(id))needComplete;//获取请求的回调
+- (void)setNeedComplete:(void (^)(id))needComplete;//设置请求的回调
 @end
 
 
-@interface NSObject (MessageRequest)
+@interface NSObject (MessageRequest) <WBMessageRequestCallbackDelegate>
 
-@property (nonatomic , strong)NSString *WB_idurl;
+-(BOOL)wb_messageRequest_registeListenner;
+-(void)wb_messageRequest_unRegisteListenner;    //dealloc方法中务调用必解注册
 
--(BOOL)WB_registeListennerWithIdurl:(NSString *)url;
--(void)WB_removeFromMessageTransferStation;
-
--(void)WB_requestURL:(NSString *)url withParams:(id)params complete:(void(^)(id response))complete;
+-(void)wb_messageRequest_request:(NSString *)recieverId params:(id)params complete:(void(^)(id response))complete;
 
 @end

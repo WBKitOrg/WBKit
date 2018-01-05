@@ -32,13 +32,11 @@
 
 #import "UILabel+htmlString.h"
 
-#import "WBWebSocketManager.h"
 #import "WBReloadScrollView.h"
 #import "WBClipableViewController.h"
 #import "WBCaptureView.h"
 #import "WBWebViewController.h"
-#import "UIViewController+WBUrlInit.h"
-#import "WBNavigationController.h"
+#import "NSObject+IdentifyHelper.h"
 #import "NSObject+MessageRequest.h"
 #import "WBURLRoute.h"
 #import "WBService.h"

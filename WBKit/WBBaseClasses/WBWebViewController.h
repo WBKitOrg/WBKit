@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
-#import "UIViewController+WBUrlInit.h"
 
 
 @protocol WBWebViewControllerActionListener <NSObject>
@@ -27,6 +26,7 @@
 
 
 @property (nonatomic , retain)WKWebView *webView;
+@property (nonatomic , strong)NSURL *url;
 
 ///request
 @property (nonatomic , retain)NSURLRequest *req;

@@ -42,11 +42,6 @@
 		2DBD7D021FF5E32300D1A967 /* WBWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D33240E1FCC52B300DA53A9 /* WBWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBD7D031FF5E32300D1A967 /* WBModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCD824F1FF3C767004721DF /* WBModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBD7D041FF5E32300D1A967 /* WBModuleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCD82531FF3C80B004721DF /* WBModuleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DBD7D051FF5E32300D1A967 /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3324121FCC545600DA53A9 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DBD7D061FF5E32300D1A967 /* WBWebSocketManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3324141FCC545600DA53A9 /* WBWebSocketManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DBD7D071FF5E32300D1A967 /* WBWebSocketMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3324161FCC545600DA53A9 /* WBWebSocketMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DBD7D081FF5E32300D1A967 /* UIViewController+WBUrlInit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3323F51FCC513E00DA53A9 /* UIViewController+WBUrlInit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DBD7D091FF5E32300D1A967 /* WBNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3323F41FCC513E00DA53A9 /* WBNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBD7D0A1FF5E32300D1A967 /* WBURLRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3323EE1FCC50BA00DA53A9 /* WBURLRoute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBD7D0B1FF5E32300D1A967 /* NSObject+MessageRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3323E11FCC509300DA53A9 /* NSObject+MessageRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBD7D0C1FF5E32300D1A967 /* WBMessageTransferStation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3323E31FCC509300DA53A9 /* WBMessageTransferStation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +58,9 @@
 		2DBD7D321FF6031B00D1A967 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D311FF6031B00D1A967 /* Foundation.framework */; };
 		2DBD7D341FF6032500D1A967 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D331FF6032500D1A967 /* UIKit.framework */; };
 		2DBD7D371FF603A100D1A967 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D351FF6036100D1A967 /* libicucore.tbd */; };
+		2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */; };
+		2DC6E6B11FFE4776004BAB1B /* NSObject+IdentifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */; };
+		2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */; };
 		2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD82541FF3C80B004721DF /* WBModuleManager.m */; };
 		2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323DA1FCC4F4E00DA53A9 /* NSString+regexDept.m */; };
 		2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E51FCC50A800DA53A9 /* NSDictionary+MutableCopy.m */; };
@@ -77,11 +75,6 @@
 		2DF1C5921FF4F986007BB079 /* WBCaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324021FCC519F00DA53A9 /* WBCaptureView.m */; };
 		2DF1C5931FF4F98A007BB079 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F91FCC515800DA53A9 /* FXBlurView.m */; };
 		2DF1C5941FF4F98C007BB079 /* UIView+WBBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323FB1FCC515800DA53A9 /* UIView+WBBlur.m */; };
-		2DF1C5951FF4F99A007BB079 /* WBWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324171FCC545600DA53A9 /* WBWebSocketMessage.m */; };
-		2DF1C5961FF4F99C007BB079 /* WBWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324151FCC545600DA53A9 /* WBWebSocketManager.m */; };
-		2DF1C5971FF4F99F007BB079 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324131FCC545600DA53A9 /* SRWebSocket.m */; };
-		2DF1C5981FF4F9A5007BB079 /* UIViewController+WBUrlInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F31FCC513E00DA53A9 /* UIViewController+WBUrlInit.m */; };
-		2DF1C5991FF4F9A7007BB079 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323F61FCC513E00DA53A9 /* WBNavigationController.m */; };
 		2DF1C59A1FF4F9C2007BB079 /* WBURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EF1FCC50BA00DA53A9 /* WBURLRoute.m */; };
 		2DF1C59B1FF4F9FB007BB079 /* NSObject+MessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E21FCC509300DA53A9 /* NSObject+MessageRequest.m */; };
 		2DF1C59C1FF4FA19007BB079 /* WBMessageTransferStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E41FCC509300DA53A9 /* WBMessageTransferStation.m */; };
@@ -139,10 +132,6 @@
 		2D3323EF1FCC50BA00DA53A9 /* WBURLRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBURLRoute.m; sourceTree = "<group>"; };
 		2D3323F01FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WBLefeCircleEventManagement.h"; sourceTree = "<group>"; };
 		2D3323F11FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WBLefeCircleEventManagement.m"; sourceTree = "<group>"; };
-		2D3323F31FCC513E00DA53A9 /* UIViewController+WBUrlInit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WBUrlInit.m"; sourceTree = "<group>"; };
-		2D3323F41FCC513E00DA53A9 /* WBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
-		2D3323F51FCC513E00DA53A9 /* UIViewController+WBUrlInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WBUrlInit.h"; sourceTree = "<group>"; };
-		2D3323F61FCC513E00DA53A9 /* WBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
 		2D3323F81FCC515800DA53A9 /* FXBlurView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		2D3323F91FCC515800DA53A9 /* FXBlurView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		2D3323FA1FCC515800DA53A9 /* UIView+WBBlur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WBBlur.h"; sourceTree = "<group>"; };
@@ -163,12 +152,6 @@
 		2D33240D1FCC529C00DA53A9 /* WBReloadScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBReloadScrollView.h; sourceTree = "<group>"; };
 		2D33240E1FCC52B300DA53A9 /* WBWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWebViewController.h; sourceTree = "<group>"; };
 		2D33240F1FCC52B300DA53A9 /* WBWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWebViewController.m; sourceTree = "<group>"; };
-		2D3324121FCC545600DA53A9 /* SRWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
-		2D3324131FCC545600DA53A9 /* SRWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		2D3324141FCC545600DA53A9 /* WBWebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWebSocketManager.h; sourceTree = "<group>"; };
-		2D3324151FCC545600DA53A9 /* WBWebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWebSocketManager.m; sourceTree = "<group>"; };
-		2D3324161FCC545600DA53A9 /* WBWebSocketMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWebSocketMessage.h; sourceTree = "<group>"; };
-		2D3324171FCC545600DA53A9 /* WBWebSocketMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBWebSocketMessage.m; sourceTree = "<group>"; };
 		2D3324181FCC550500DA53A9 /* WBHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBHeader.h; sourceTree = "<group>"; };
 		2D3324201FCFA5F300DA53A9 /* UILabel+htmlString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+htmlString.h"; sourceTree = "<group>"; };
 		2D3324211FCFA5F300DA53A9 /* UILabel+htmlString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+htmlString.m"; sourceTree = "<group>"; };
@@ -200,6 +183,10 @@
 		2DBD7D311FF6031B00D1A967 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2DBD7D331FF6032500D1A967 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2DBD7D351FF6036100D1A967 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+IdentifyHelper.h"; sourceTree = "<group>"; };
+		2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IdentifyHelper.m"; sourceTree = "<group>"; };
+		2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMessageListenner.h; sourceTree = "<group>"; };
+		2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMessageListenner.m; sourceTree = "<group>"; };
 		2DCD824F1FF3C767004721DF /* WBModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModule.h; sourceTree = "<group>"; };
 		2DCD82501FF3C798004721DF /* WBService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBService.h; sourceTree = "<group>"; };
 		2DCD82531FF3C80B004721DF /* WBModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModuleManager.h; sourceTree = "<group>"; };
@@ -308,8 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				2DCD824E1FF3C65F004721DF /* WBModuleManager */,
-				2D3324111FCC545600DA53A9 /* WBWebSocket */,
-				2D3323F21FCC512100DA53A9 /* WBUrlInitController */,
 				2D3323E91FCC50BA00DA53A9 /* WBRoute */,
 				2D3323E01FCC509300DA53A9 /* WBMessageRequestHelper */,
 			);
@@ -319,6 +304,8 @@
 		2D3323E01FCC509300DA53A9 /* WBMessageRequestHelper */ = {
 			isa = PBXGroup;
 			children = (
+				2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */,
+				2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */,
 				2D3323E11FCC509300DA53A9 /* NSObject+MessageRequest.h */,
 				2D3323E21FCC509300DA53A9 /* NSObject+MessageRequest.m */,
 				2D3323E31FCC509300DA53A9 /* WBMessageTransferStation.h */,
@@ -334,17 +321,6 @@
 				2D3323EF1FCC50BA00DA53A9 /* WBURLRoute.m */,
 			);
 			path = WBRoute;
-			sourceTree = "<group>";
-		};
-		2D3323F21FCC512100DA53A9 /* WBUrlInitController */ = {
-			isa = PBXGroup;
-			children = (
-				2D3323F51FCC513E00DA53A9 /* UIViewController+WBUrlInit.h */,
-				2D3323F31FCC513E00DA53A9 /* UIViewController+WBUrlInit.m */,
-				2D3323F41FCC513E00DA53A9 /* WBNavigationController.h */,
-				2D3323F61FCC513E00DA53A9 /* WBNavigationController.m */,
-			);
-			path = WBUrlInitController;
 			sourceTree = "<group>";
 		};
 		2D3323F71FCC515800DA53A9 /* WBBlurView */ = {
@@ -396,19 +372,6 @@
 			path = WBReloadScroll;
 			sourceTree = "<group>";
 		};
-		2D3324111FCC545600DA53A9 /* WBWebSocket */ = {
-			isa = PBXGroup;
-			children = (
-				2D3324121FCC545600DA53A9 /* SRWebSocket.h */,
-				2D3324131FCC545600DA53A9 /* SRWebSocket.m */,
-				2D3324141FCC545600DA53A9 /* WBWebSocketManager.h */,
-				2D3324151FCC545600DA53A9 /* WBWebSocketManager.m */,
-				2D3324161FCC545600DA53A9 /* WBWebSocketMessage.h */,
-				2D3324171FCC545600DA53A9 /* WBWebSocketMessage.m */,
-			);
-			path = WBWebSocket;
-			sourceTree = "<group>";
-		};
 		2D33241E1FCFA59800DA53A9 /* UI+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +421,8 @@
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
 				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
 				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
+				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
+				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
 				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
 				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
 				2DBD7D1B1FF5EC1000D1A967 /* Main.storyboard */,
@@ -512,6 +477,7 @@
 				2DBD7CF61FF5E32300D1A967 /* UIViewController+WBLefeCircleEventManagement.h in Headers */,
 				2DBD7CF71FF5E32300D1A967 /* UIImage+ClearImage.h in Headers */,
 				2DBD7CF81FF5E32300D1A967 /* UIImage+maskCut.h in Headers */,
+				2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */,
 				2DBD7CF91FF5E32300D1A967 /* UIView+WBAnimationHelp.h in Headers */,
 				2DBD7CFA1FF5E32300D1A967 /* UILabel+htmlString.h in Headers */,
 				2DBD7CFB1FF5E32300D1A967 /* WBReloadScrollView.h in Headers */,
@@ -524,11 +490,6 @@
 				2DBD7D021FF5E32300D1A967 /* WBWebViewController.h in Headers */,
 				2DBD7D031FF5E32300D1A967 /* WBModule.h in Headers */,
 				2DBD7D041FF5E32300D1A967 /* WBModuleManager.h in Headers */,
-				2DBD7D051FF5E32300D1A967 /* SRWebSocket.h in Headers */,
-				2DBD7D061FF5E32300D1A967 /* WBWebSocketManager.h in Headers */,
-				2DBD7D071FF5E32300D1A967 /* WBWebSocketMessage.h in Headers */,
-				2DBD7D081FF5E32300D1A967 /* UIViewController+WBUrlInit.h in Headers */,
-				2DBD7D091FF5E32300D1A967 /* WBNavigationController.h in Headers */,
 				2DBD7D0A1FF5E32300D1A967 /* WBURLRoute.h in Headers */,
 				2DBD7D0B1FF5E32300D1A967 /* NSObject+MessageRequest.h in Headers */,
 				2DBD7D0C1FF5E32300D1A967 /* WBMessageTransferStation.h in Headers */,
@@ -633,11 +594,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */,
-				2DF1C5991FF4F9A7007BB079 /* WBNavigationController.m in Sources */,
+				2DC6E6B11FFE4776004BAB1B /* NSObject+IdentifyHelper.m in Sources */,
 				2DF1C58A1FF4F946007BB079 /* NSObject+PropertyListing.m in Sources */,
 				2D3324101FCC52B300DA53A9 /* WBWebViewController.m in Sources */,
 				2DF1C59A1FF4F9C2007BB079 /* WBURLRoute.m in Sources */,
-				2DF1C5981FF4F9A5007BB079 /* UIViewController+WBUrlInit.m in Sources */,
 				2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */,
 				2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */,
 				2DF1C58F1FF4F961007BB079 /* WBClipableViewController.m in Sources */,
@@ -648,9 +608,7 @@
 				2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */,
 				2DF1C5911FF4F966007BB079 /* WBFlyClipManager.m in Sources */,
 				2D3324221FCFA5F300DA53A9 /* UILabel+htmlString.m in Sources */,
-				2DF1C5951FF4F99A007BB079 /* WBWebSocketMessage.m in Sources */,
 				2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */,
-				2DF1C5961FF4F99C007BB079 /* WBWebSocketManager.m in Sources */,
 				2DF1C58D1FF4F956007BB079 /* UIView+WBAnimationHelp.m in Sources */,
 				2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */,
 				2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */,
@@ -663,7 +621,6 @@
 				2DF1C59C1FF4FA19007BB079 /* WBMessageTransferStation.m in Sources */,
 				2DF1C5941FF4F98C007BB079 /* UIView+WBBlur.m in Sources */,
 				2DF1C58B1FF4F94E007BB079 /* UIViewController+WBLefeCircleEventManagement.m in Sources */,
-				2DF1C5971FF4F99F007BB079 /* SRWebSocket.m in Sources */,
 				2D3324251FCFA6E100DA53A9 /* NSString+DecodingXMLEntities.m in Sources */,
 				2DF1C5901FF4F963007BB079 /* UIViewController+WBFlyClip.m in Sources */,
 			);
@@ -673,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */,
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
 				2DBD7D2B1FF5EC4F00D1A967 /* DemoModule.m in Sources */,

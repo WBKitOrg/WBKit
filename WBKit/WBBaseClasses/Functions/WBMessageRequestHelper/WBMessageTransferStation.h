@@ -12,9 +12,9 @@
 
 + (WBMessageTransferStation *) sharedStation;
 
--(BOOL)registe:(id)listenner WithIdurl:(NSString *)url;
--(BOOL)remove:(id)listenner ForUrl:(NSString *)url;
+-(BOOL)registe:(id)listenner wb_id:(NSString *)identification;
+-(BOOL)remove:(id)listenner wb_id:(NSString *)identification;
 
--(void)postMessage:(id)message from:(NSString *)fromUrl to:(NSString *)toUrl;
+-(void)postMessage:(id)message from:(NSString *)fromId to:(NSString *)toId;
 
 @end

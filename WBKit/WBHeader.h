@@ -42,16 +42,16 @@
 #define kStatusBarHeight            (IS_IPHONE_X?44:20)
 #endif
 
-#ifndef ScreenWidth
-#define ScreenWidth        ([UIScreen mainScreen].bounds.size.width)
+#ifndef kScreenWidth
+#define kScreenWidth        ([UIScreen mainScreen].bounds.size.width)
 #endif
 
-#ifndef ScreenHeight
-#define ScreenHeight      ([UIScreen mainScreen].bounds.size.height)
+#ifndef kScreenHeight
+#define kScreenHeight      ([UIScreen mainScreen].bounds.size.height)
 #endif
 
-#ifndef ScreenSmallSide
-#define ScreenSmallSide   ([[UIScreen mainScreen] bounds].size.height>[[UIScreen mainScreen] bounds].size.width ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+#ifndef kScreenSmallSide
+#define kScreenSmallSide   ([[UIScreen mainScreen] bounds].size.height>[[UIScreen mainScreen] bounds].size.width ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 #endif
 
 //键盘弹出动画
