@@ -1,6 +1,10 @@
 # WBKit
 WBKit IOS framework
 ----------------------------
+
+* 2018.1.11
+增加了`UIView+Skinable`，支持自定义默认控件样式
+
 * 2017.12.29
 增加了demo的target
 
