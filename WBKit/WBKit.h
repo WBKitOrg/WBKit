@@ -29,6 +29,7 @@
 
 #import "UIView+WBAnimationHelp.h"
 #import "UIView+WBBlur.h"
+#import "UIView+Skinable.h"
 
 #import "UILabel+htmlString.h"
 
