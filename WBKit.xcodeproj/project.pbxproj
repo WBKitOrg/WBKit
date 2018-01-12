@@ -15,6 +15,7 @@
 		2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */; };
 		2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */; };
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
+		2D4AA6722007515A00613341 /* DemoIbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA6712007515A00613341 /* DemoIbView.m */; };
 		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
 		2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */; };
 		2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */; };
@@ -58,9 +59,12 @@
 		2DBD7D321FF6031B00D1A967 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D311FF6031B00D1A967 /* Foundation.framework */; };
 		2DBD7D341FF6032500D1A967 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D331FF6032500D1A967 /* UIKit.framework */; };
 		2DBD7D371FF603A100D1A967 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD7D351FF6036100D1A967 /* libicucore.tbd */; };
-		2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */; };
+		2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DC6E6B11FFE4776004BAB1B /* NSObject+IdentifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */; };
 		2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */; };
+		2DC7E9552004DF32008904FD /* UIView+Skinable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC7E9532004DF32008904FD /* UIView+Skinable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DC7E9562004DF32008904FD /* UIView+Skinable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7E9542004DF32008904FD /* UIView+Skinable.m */; };
+		2DC7E9592004E2DD008904FD /* SkinModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7E9582004E2DD008904FD /* SkinModule.m */; };
 		2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD82541FF3C80B004721DF /* WBModuleManager.m */; };
 		2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323DA1FCC4F4E00DA53A9 /* NSString+regexDept.m */; };
 		2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323E51FCC50A800DA53A9 /* NSDictionary+MutableCopy.m */; };
@@ -161,6 +165,8 @@
 		2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WBAdditions.m"; sourceTree = "<group>"; };
 		2D3324291FCFAE8800DA53A9 /* UIImage+maskCut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+maskCut.h"; sourceTree = "<group>"; };
 		2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+maskCut.m"; sourceTree = "<group>"; };
+		2D4AA6702007515A00613341 /* DemoIbView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoIbView.h; sourceTree = "<group>"; };
+		2D4AA6712007515A00613341 /* DemoIbView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoIbView.m; sourceTree = "<group>"; };
 		2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+WBAdditions.h"; sourceTree = "<group>"; };
 		2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WBAdditions.m"; sourceTree = "<group>"; };
 		2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SaveToDisk.h"; sourceTree = "<group>"; };
@@ -187,6 +193,10 @@
 		2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IdentifyHelper.m"; sourceTree = "<group>"; };
 		2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMessageListenner.h; sourceTree = "<group>"; };
 		2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMessageListenner.m; sourceTree = "<group>"; };
+		2DC7E9532004DF32008904FD /* UIView+Skinable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Skinable.h"; sourceTree = "<group>"; };
+		2DC7E9542004DF32008904FD /* UIView+Skinable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Skinable.m"; sourceTree = "<group>"; };
+		2DC7E9572004E2DD008904FD /* SkinModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinModule.h; sourceTree = "<group>"; };
+		2DC7E9582004E2DD008904FD /* SkinModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinModule.m; sourceTree = "<group>"; };
 		2DCD824F1FF3C767004721DF /* WBModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModule.h; sourceTree = "<group>"; };
 		2DCD82501FF3C798004721DF /* WBService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBService.h; sourceTree = "<group>"; };
 		2DCD82531FF3C80B004721DF /* WBModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModuleManager.h; sourceTree = "<group>"; };
@@ -383,6 +393,8 @@
 				2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */,
 				2D3323FE1FCC518900DA53A9 /* UIView+WBAnimationHelp.h */,
 				2D3323FF1FCC518900DA53A9 /* UIView+WBAnimationHelp.m */,
+				2DC7E9532004DF32008904FD /* UIView+Skinable.h */,
+				2DC7E9542004DF32008904FD /* UIView+Skinable.m */,
 				2D3324201FCFA5F300DA53A9 /* UILabel+htmlString.h */,
 				2D3324211FCFA5F300DA53A9 /* UILabel+htmlString.m */,
 			);
@@ -421,10 +433,14 @@
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
 				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
 				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
+				2D4AA6702007515A00613341 /* DemoIbView.h */,
+				2D4AA6712007515A00613341 /* DemoIbView.m */,
 				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
 				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
 				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
 				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
+				2DC7E9572004E2DD008904FD /* SkinModule.h */,
+				2DC7E9582004E2DD008904FD /* SkinModule.m */,
 				2DBD7D1B1FF5EC1000D1A967 /* Main.storyboard */,
 				2DBD7D1E1FF5EC1000D1A967 /* Assets.xcassets */,
 				2DBD7D201FF5EC1000D1A967 /* LaunchScreen.storyboard */,
@@ -477,7 +493,6 @@
 				2DBD7CF61FF5E32300D1A967 /* UIViewController+WBLefeCircleEventManagement.h in Headers */,
 				2DBD7CF71FF5E32300D1A967 /* UIImage+ClearImage.h in Headers */,
 				2DBD7CF81FF5E32300D1A967 /* UIImage+maskCut.h in Headers */,
-				2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */,
 				2DBD7CF91FF5E32300D1A967 /* UIView+WBAnimationHelp.h in Headers */,
 				2DBD7CFA1FF5E32300D1A967 /* UILabel+htmlString.h in Headers */,
 				2DBD7CFB1FF5E32300D1A967 /* WBReloadScrollView.h in Headers */,
@@ -492,6 +507,8 @@
 				2DBD7D041FF5E32300D1A967 /* WBModuleManager.h in Headers */,
 				2DBD7D0A1FF5E32300D1A967 /* WBURLRoute.h in Headers */,
 				2DBD7D0B1FF5E32300D1A967 /* NSObject+MessageRequest.h in Headers */,
+				2DC6E6B01FFE4776004BAB1B /* NSObject+IdentifyHelper.h in Headers */,
+				2DC7E9552004DF32008904FD /* UIView+Skinable.h in Headers */,
 				2DBD7D0C1FF5E32300D1A967 /* WBMessageTransferStation.h in Headers */,
 				2DBD7D0D1FF5E32300D1A967 /* WBAppHelper.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
@@ -594,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */,
+				2DC7E9562004DF32008904FD /* UIView+Skinable.m in Sources */,
 				2DC6E6B11FFE4776004BAB1B /* NSObject+IdentifyHelper.m in Sources */,
 				2DF1C58A1FF4F946007BB079 /* NSObject+PropertyListing.m in Sources */,
 				2D3324101FCC52B300DA53A9 /* WBWebViewController.m in Sources */,
@@ -632,9 +650,11 @@
 			files = (
 				2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */,
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
+				2DC7E9592004E2DD008904FD /* SkinModule.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
 				2DBD7D2B1FF5EC4F00D1A967 /* DemoModule.m in Sources */,
 				2DBD7D171FF5EC1000D1A967 /* AppDelegate.m in Sources */,
+				2D4AA6722007515A00613341 /* DemoIbView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

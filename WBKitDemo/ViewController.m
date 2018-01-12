@@ -22,20 +22,18 @@
     UIButton *routeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [routeButton setFrame:CGRectMake(100, kNavigationBarHeight+50, kScreenWidth-200, 50)];
     [routeButton setTitle:@"试一试route" forState:UIControlStateNormal];
-    [routeButton.layer setBorderColor:COLOR_HEX(0x0000ff).CGColor];
-    [routeButton.layer setBorderWidth:1.0f];
-    [routeButton.layer setCornerRadius:25.0f];
     [routeButton addTarget:self action:@selector(tryRoute) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:routeButton];
     
-    UIButton *messageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *messageButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [messageButton setFrame:CGRectMake(100, kNavigationBarHeight+150, kScreenWidth-200, 50)];
     [messageButton setTitle:@"试一试messageRequest" forState:UIControlStateNormal];
-    [messageButton.layer setBorderColor:COLOR_HEX(0x0000ff).CGColor];
-    [messageButton.layer setBorderWidth:1.0f];
-    [messageButton.layer setCornerRadius:25.0f];
     [messageButton addTarget:self action:@selector(tryMessage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:messageButton];
+    
+    UIView *view = [[UIView alloc] init];
+    [view setFrame:CGRectMake(100, kNavigationBarHeight+250, kScreenWidth-200, 50)];
+    [self.view addSubview:view];
 }
 
 - (void)dealloc
