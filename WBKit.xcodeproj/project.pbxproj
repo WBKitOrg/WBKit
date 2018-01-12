@@ -16,6 +16,8 @@
 		2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */; };
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
 		2D4AA6722007515A00613341 /* DemoIbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA6712007515A00613341 /* DemoIbView.m */; };
+		2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4AA677200861F800613341 /* UIControl+BlockedAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D4AA67A200861F800613341 /* UIControl+BlockedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA678200861F800613341 /* UIControl+BlockedAction.m */; };
 		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
 		2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */; };
 		2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */; };
@@ -167,6 +169,8 @@
 		2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+maskCut.m"; sourceTree = "<group>"; };
 		2D4AA6702007515A00613341 /* DemoIbView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoIbView.h; sourceTree = "<group>"; };
 		2D4AA6712007515A00613341 /* DemoIbView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoIbView.m; sourceTree = "<group>"; };
+		2D4AA677200861F800613341 /* UIControl+BlockedAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+BlockedAction.h"; sourceTree = "<group>"; };
+		2D4AA678200861F800613341 /* UIControl+BlockedAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BlockedAction.m"; sourceTree = "<group>"; };
 		2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+WBAdditions.h"; sourceTree = "<group>"; };
 		2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WBAdditions.m"; sourceTree = "<group>"; };
 		2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SaveToDisk.h"; sourceTree = "<group>"; };
@@ -397,6 +401,8 @@
 				2DC7E9542004DF32008904FD /* UIView+Skinable.m */,
 				2D3324201FCFA5F300DA53A9 /* UILabel+htmlString.h */,
 				2D3324211FCFA5F300DA53A9 /* UILabel+htmlString.m */,
+				2D4AA677200861F800613341 /* UIControl+BlockedAction.h */,
+				2D4AA678200861F800613341 /* UIControl+BlockedAction.m */,
 			);
 			path = "UI+";
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				2DC7E9552004DF32008904FD /* UIView+Skinable.h in Headers */,
 				2DBD7D0C1FF5E32300D1A967 /* WBMessageTransferStation.h in Headers */,
 				2DBD7D0D1FF5E32300D1A967 /* WBAppHelper.h in Headers */,
+				2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +633,7 @@
 				2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */,
 				2DF1C5911FF4F966007BB079 /* WBFlyClipManager.m in Sources */,
 				2D3324221FCFA5F300DA53A9 /* UILabel+htmlString.m in Sources */,
+				2D4AA67A200861F800613341 /* UIControl+BlockedAction.m in Sources */,
 				2DF1C5881FF4F93C007BB079 /* NSString+regexDept.m in Sources */,
 				2DF1C58D1FF4F956007BB079 /* UIView+WBAnimationHelp.m in Sources */,
 				2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */,

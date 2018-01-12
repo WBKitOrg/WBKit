@@ -2,6 +2,9 @@
 WBKit IOS framework
 ----------------------------
 
+* 2018.1.12
+增加了`UIControl+BlockedAction`，支持UIControl的事件block化
+
 * 2018.1.11
 增加了`UIView+Skinable`，支持自定义默认控件样式
 

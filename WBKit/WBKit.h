@@ -33,6 +33,8 @@
 
 #import "UILabel+htmlString.h"
 
+#import "UIControl+BlockedAction.h"
+
 #import "WBReloadScrollView.h"
 #import "WBClipableViewController.h"
 #import "WBCaptureView.h"
