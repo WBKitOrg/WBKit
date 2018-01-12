@@ -58,5 +58,9 @@
 
 // 是否是今天
 - (BOOL)isToday;
+#pragma mark  -- GMT string for china eg:"星期二 十二月 19 10:26:16 GMT 2017"
++ (NSDate *)dateTransformFromGMTString:(NSString *)gmtTime;
+#pragma mark  -- GMT string for en  eg: "Thu, 28 Dec 2017 22:03:51 GMT+0800" || "Fri, 12 Jan 2018 09:21:38 GMT"
++ (NSDate *)dateTransformFromEnGMTString:(NSString *)gmtStr_en;
 
 @end

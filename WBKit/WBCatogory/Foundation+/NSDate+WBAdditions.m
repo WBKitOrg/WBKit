@@ -7,7 +7,8 @@
 //
 
 #import "NSDate+WBAdditions.h"
-
+#define GMTFORMAT       @"EEEE MMMM dd HH:mm:ss 'GMT' yyyy"
+#define GMTFORMAT_EN    @"EEE, dd MMM yyyy HH:mm:ss 'GMT'"
 @implementation NSDate (WBAdditions)
 
 - (NSDateComponents *)componentsOfDay
@@ -184,6 +185,32 @@
 {
     [[self componentsOfDay] setDay:1];
     return [[NSCalendar currentCalendar] dateFromComponents:[self componentsOfDay]];
+}
+
+//GMT string for china
++ (NSDate *)dateTransformFromGMTString:(NSString *)gmtTime {
+    NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
+    fmtt.dateFormat = GMTFORMAT;
+    fmtt.timeZone = [NSTimeZone localTimeZone];
+    fmtt.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
+    NSDate *date = [fmtt dateFromString:gmtTime];
+    return date;
+}
+//GMT string for en
++ (NSDate *)dateTransformFromEnGMTString:(NSString *)gmtStr_en
+{
+    NSString *newGMT = nil;
+    if ([gmtStr_en containsString:@"+0800"]) {
+        newGMT = [gmtStr_en stringByReplacingOccurrencesOfString:@"+0800" withString:@""];
+    } else {
+        newGMT = gmtStr_en;
+    }
+    NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
+    fmtt.dateFormat = GMTFORMAT_EN;
+    [fmtt setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    fmtt.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
+    NSDate *date = [fmtt dateFromString:newGMT];
+    return date;
 }
 
 @end
