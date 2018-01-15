@@ -7,8 +7,7 @@
 //
 
 #import "NSDate+WBAdditions.h"
-#define GMTFORMAT       @"EEEE MMMM dd HH:mm:ss 'GMT' yyyy"
-#define GMTFORMAT_EN    @"EEE, dd MMM yyyy HH:mm:ss 'GMT'"
+
 @implementation NSDate (WBAdditions)
 
 - (NSDateComponents *)componentsOfDay
@@ -187,30 +186,53 @@
     return [[NSCalendar currentCalendar] dateFromComponents:[self componentsOfDay]];
 }
 
-//GMT string for china
-+ (NSDate *)dateTransformFromGMTString:(NSString *)gmtTime {
-    NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
-    fmtt.dateFormat = GMTFORMAT;
-    fmtt.timeZone = [NSTimeZone localTimeZone];
-    fmtt.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
-    NSDate *date = [fmtt dateFromString:gmtTime];
-    return date;
-}
-//GMT string for en
-+ (NSDate *)dateTransformFromEnGMTString:(NSString *)gmtStr_en
+
+#define DEFAULTFORMAT   @"yyyy-MM-dd HH:mm:ss"
+#define GMTFORMAT       @"EEEE MMMM dd HH:mm:ss 'GMT' yyyy"
+#define GMTFORMAT_EN    @"EEE, dd MMM yyyy HH:mm:ss 'GMT'"
+
++ (NSDate *)dateFromFormattedString:(NSString *)gmtString formatType:(WBDateFormat)format
 {
-    NSString *newGMT = nil;
-    if ([gmtStr_en containsString:@"+0800"]) {
-        newGMT = [gmtStr_en stringByReplacingOccurrencesOfString:@"+0800" withString:@""];
-    } else {
-        newGMT = gmtStr_en;
+    if (format == WBDateFormatDefault) {
+        NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
+        fmtt.dateFormat = DEFAULTFORMAT;
+        NSDate *date = [fmtt dateFromString:gmtString];
+        return date;
+    } else if (format == WBDateFormatGMT) {
+        NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
+        fmtt.dateFormat = GMTFORMAT;
+        fmtt.timeZone = [NSTimeZone localTimeZone];
+        fmtt.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
+        NSDate *date = [fmtt dateFromString:gmtString];
+        return date;
+    } else if (format == WBDateFormatGMTEN){
+        NSString *newGMT = nil;
+        if ([gmtString containsString:@"+0800"]) {
+            newGMT = [gmtString stringByReplacingOccurrencesOfString:@"+0800" withString:@""];
+        } else {
+            newGMT = gmtString;
+        }
+        NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
+        fmtt.dateFormat = GMTFORMAT_EN;
+        [fmtt setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        fmtt.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
+        NSDate *date = [fmtt dateFromString:newGMT];
+        return date;
     }
-    NSDateFormatter *fmtt = [[NSDateFormatter alloc] init];
-    fmtt.dateFormat = GMTFORMAT_EN;
-    [fmtt setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-    fmtt.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
-    NSDate *date = [fmtt dateFromString:newGMT];
-    return date;
+    
+    return nil;
+}
+
++ (NSDate *)dateFromFormattedString:(NSString *)dateString
+{
+    if ([dateString containsString:@"GMT"]) {
+        if ([[[NSLocale preferredLanguages] objectAtIndex:0] hasPrefix:@"zh"]) {
+            return [self dateFromFormattedString:dateString formatType:WBDateFormatGMT];
+        } else {
+            return [self dateFromFormattedString:dateString formatType:WBDateFormatGMTEN];
+        }
+    }
+    return [self dateFromFormattedString:dateString formatType:WBDateFormatDefault];
 }
 
 @end

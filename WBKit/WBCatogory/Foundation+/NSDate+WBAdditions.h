@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum{
+    WBDateFormatDefault = 0,    //Use default time formatter as "yyyy-MM-dd HH:mm:ss"
+    WBDateFormatGMT,            //GMT string for china eg:"星期二 十二月 19 10:26:16 GMT 2017"
+    WBDateFormatGMTEN,          //GMT string for en  eg: "Thu, 28 Dec 2017 22:03:51 GMT+0800" || "Fri, 12 Jan 2018 09:21:38 GMT"
+}WBDateFormat;
+
 @interface NSDate (WBAdditions)
 
 - (NSDateComponents *)componentsOfDay;
@@ -58,9 +64,15 @@
 
 // 是否是今天
 - (BOOL)isToday;
-#pragma mark  -- GMT string for china eg:"星期二 十二月 19 10:26:16 GMT 2017"
-+ (NSDate *)dateTransformFromGMTString:(NSString *)gmtTime;
-#pragma mark  -- GMT string for en  eg: "Thu, 28 Dec 2017 22:03:51 GMT+0800" || "Fri, 12 Jan 2018 09:21:38 GMT"
-+ (NSDate *)dateTransformFromEnGMTString:(NSString *)gmtStr_en;
+
+/*! @brief 将字符串根据自定义的GMTFormat进行转化的方法
+ *
+ * @param gmtString 需要转换的string
+ * @param format 转换的规定格式
+ * @note 无formatType参数的方法会自动判断需要使用的format
+ * @see WBDateFormat 
+ */
++ (NSDate *)dateFromFormattedString:(NSString *)gmtString formatType:(WBDateFormat)format;
++ (NSDate *)dateFromFormattedString:(NSString *)dateString;
 
 @end

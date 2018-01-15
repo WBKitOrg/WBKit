@@ -19,6 +19,7 @@
 
 #import "NSObject+PropertyListing.h"
 #import "NSObject+SaveToDisk.h"
+#import "NSDate+WBAdditions.h"
 
 #import "UIColor+WBAdditions.h"
 
