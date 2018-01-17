@@ -28,7 +28,10 @@
     UIButton *messageButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [messageButton setFrame:CGRectMake(100, kNavigationBarHeight+150, kScreenWidth-200, 50)];
     [messageButton setTitle:@"试一试messageRequest" forState:UIControlStateNormal];
-    [messageButton addTarget:self action:@selector(tryMessage) forControlEvents:UIControlEventTouchUpInside];
+    __weak typeof (self) weakSelf = self;
+    [messageButton addAction:^{
+        [weakSelf tryMessage];
+    } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:messageButton];
     
     UIView *view = [[UIView alloc] init];
