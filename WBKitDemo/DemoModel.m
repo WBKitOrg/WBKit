@@ -15,5 +15,12 @@
 
 @implementation DemoModel
 
++ (NSDictionary *)keyNameForPropertyName
+{
+    return @{
+             @"ID": @"id",
+             };
+}
+
 @end
 

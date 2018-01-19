@@ -17,6 +17,7 @@
 
 @interface DemoModel : NSObject
 
+@property (nonatomic        ) NSInteger ID;
 @property (nonatomic, strong) DemoSubModel *propertySubModel;
 @property (nonatomic, strong) NSNumber *propertyNumber;
 

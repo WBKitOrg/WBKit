@@ -45,6 +45,7 @@
     sub.propertyString = @"sub";
     model.propertySubModel = sub;
     model.propertyNumber = @(11);
+    model.ID = 10010;
     NSDictionary *dic = [model propertyList];
     
     DemoModel *modelBack = [[DemoModel alloc] initWithDictionary:dic];

@@ -11,6 +11,13 @@
 
 @implementation NSObject (PropertyListing)
 
+#pragma mark - PropertyRedirect
+
++ (NSDictionary *)keyNameForPropertyName
+{
+    return nil;
+}
+
 #pragma mark -获取所有对象方法
 -(NSArray *)methodList
 {
@@ -37,8 +44,12 @@
         objc_property_t property = properties[i];
         const char* char_f =property_getName(property);
         NSString *propertyName = [NSString stringWithUTF8String:char_f];
-        id propertyValue = [self valueForKey:(NSString *)propertyName];
-        if (propertyValue) [props setObject:[propertyValue propertyList] forKey:propertyName];
+        id propertyValue = [self valueForKey:propertyName];
+        NSString *redirectedKeyName;
+        if ([[[self class] keyNameForPropertyName] valueForKey:propertyName]) {
+            redirectedKeyName = [[[self class] keyNameForPropertyName] valueForKey:propertyName];
+        }
+        if (propertyValue) [props setObject:[propertyValue propertyList] forKey:redirectedKeyName.length>0?redirectedKeyName:propertyName];
     }
     free(properties);
     if (props.allKeys.count>0) {
@@ -56,40 +67,54 @@
     self = [self init];
     if (dictionary && self) {
         for (NSString *keyName in [dictionary allKeys]) {
-            id valueToSet;
-            if ([[dictionary objectForKey:keyName] isKindOfClass:[NSDictionary class]]) {
-                unsigned int outCount, i;
-                objc_property_t *properties = class_copyPropertyList([self class], &outCount);
-                for (i = 0; i<outCount; i++)
-                {
-                    objc_property_t property = properties[i];
-                    const char* char_f =property_getName(property);
-                    NSString *propertyName = [NSString stringWithUTF8String:char_f];
-                    if ([propertyName isEqualToString:keyName]) {
-                        const char * type = property_getAttributes(property);
-                        NSString * typeString = [NSString stringWithUTF8String:type];
-                        NSArray * attributes = [typeString componentsSeparatedByString:@","];
-                        NSString * typeAttribute = [attributes objectAtIndex:0];
-                        if ([typeAttribute hasPrefix:@"T@"] && [typeAttribute length] > 1) {
-                            NSString * typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, [typeAttribute length]-4)];
-                            Class typeClass = NSClassFromString(typeClassName);
-                            if (typeClass != nil) {
-                                valueToSet = [[typeClass alloc] initWithDictionary:[dictionary objectForKey:keyName]];
-                            }
-                        }
-                        break;
-                    }
-                }
-            } else {
-                valueToSet = [dictionary objectForKey:keyName];
-            }
+            id valueToSet = [self propertyValueForDictionaryKey:keyName inDictionary:dictionary];
             if (valueToSet) {
-                [self setValue:valueToSet forKey:keyName];
+                NSString *redirectedPropertyName = [[[[self class] keyNameForPropertyName] allKeysForObject:keyName] firstObject];
+                [self setValue:valueToSet forKey:(redirectedPropertyName.length>0?redirectedPropertyName:keyName)];
             }
         }//end for
         return self;
     }//end if
     return nil;
+}
+
+- (id)propertyValueForDictionaryKey:(NSString *)dictKey inDictionary:(NSDictionary *)dictionary
+{
+    id valueToSet;
+    NSString *redirectedPropertyName = [[[[self class] keyNameForPropertyName] allKeysForObject:dictKey] firstObject];
+    if ([[dictionary objectForKey:dictKey] isKindOfClass:[NSDictionary class]]) {
+        unsigned int outCount, i;
+        objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+        for (i = 0; i<outCount; i++) {
+            objc_property_t property = properties[i];
+            const char* char_f =property_getName(property);
+            NSString *propertyName = [NSString stringWithUTF8String:char_f];
+            if ([propertyName isEqualToString:(redirectedPropertyName.length>0?redirectedPropertyName:dictKey)]) {
+                //找到对应的属性
+                const char * type = property_getAttributes(property);
+                NSString * typeString = [NSString stringWithUTF8String:type];
+                NSArray * attributes = [typeString componentsSeparatedByString:@","];
+                NSString * typeAttribute = [attributes objectAtIndex:0];
+                if ([typeAttribute hasPrefix:@"T@"] && [typeAttribute length] > 1) {
+                    NSString * typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, [typeAttribute length]-4)];
+                    Class typeClass = NSClassFromString(typeClassName);
+                    if (typeClass != nil) {
+                        valueToSet = [[typeClass alloc] initWithDictionary:[dictionary objectForKey:dictKey]];
+                    }
+                } else {
+                    //不是对象类型
+                    valueToSet = [dictionary objectForKey:dictKey];
+                }
+                break;
+            } else {
+                //没找到对应属性
+            }
+        }
+    } else {
+        //统一处理
+        valueToSet = [dictionary objectForKey:dictKey];
+    }
+    return valueToSet;
 }
 
 

@@ -8,7 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (PropertyListing)
+@protocol PropertyRedirect <NSObject>
+
+/*! @brief Examples
+ *
+ *     + (NSDictionary *)keyNameForPropertyName {
+ *         return @{
+ *             @"ID": @"id",
+ *             @"pointStatus": @"point",
+ *             @"starred": @"starred"
+ *         };
+ *     }
+ */
++ (NSDictionary *)keyNameForPropertyName;
+
+@end
+
+@interface NSObject (PropertyListing) <PropertyRedirect>
 
 -(BOOL)isKindOfData:(id)classtype;
 -(NSArray *)methodList;
@@ -17,5 +33,9 @@
  * @note 如果本身已经是基本属性，则返回self
  */
 -(id)propertyList;
+
+/*! @brief 将字典转换成自定义对象
+ * @note 如果本身已经是字典，则返回字典
+ */
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 @end
