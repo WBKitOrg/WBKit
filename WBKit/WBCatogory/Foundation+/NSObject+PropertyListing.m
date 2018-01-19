@@ -11,24 +11,6 @@
 
 @implementation NSObject (PropertyListing)
 
-#pragma mark -获取所有属性
-- (NSDictionary *)propertyList
-{
-    NSMutableDictionary *props = [NSMutableDictionary dictionary];
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
-    for (i = 0; i<outCount; i++)
-    {
-        objc_property_t property = properties[i];
-        const char* char_f =property_getName(property);
-        NSString *propertyName = [NSString stringWithUTF8String:char_f];
-        id propertyValue = [self valueForKey:(NSString *)propertyName];
-        if (propertyValue) [props setObject:propertyValue forKey:propertyName];
-    }
-    free(properties);
-    return props;
-}
-
 #pragma mark -获取所有对象方法
 -(NSArray *)methodList
 {
@@ -44,29 +26,68 @@
     return methods;
 }
 
+#pragma mark -获取所有属性
+- (id)propertyList
+{
+    NSMutableDictionary *props = [NSMutableDictionary dictionary];
+    unsigned int outCount, i;
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    for (i = 0; i<outCount; i++)
+    {
+        objc_property_t property = properties[i];
+        const char* char_f =property_getName(property);
+        NSString *propertyName = [NSString stringWithUTF8String:char_f];
+        id propertyValue = [self valueForKey:(NSString *)propertyName];
+        if (propertyValue) [props setObject:[propertyValue propertyList] forKey:propertyName];
+    }
+    free(properties);
+    if (props.allKeys.count>0) {
+        return props;
+    } else {
+        return self;
+    }
+}
+
 #pragma mark -字典转换为对象返回，这里没有类型验证，可以配合isKindOfData同时使用
 -(id)initWithDictionary:(NSDictionary *)dictionary{
+    if ([[self class] isKindOfClass:[NSDictionary class]]) {
+        return dictionary;
+    }
     self = [self init];
     if (dictionary && self) {
-        
         for (NSString *keyName in [dictionary allKeys]) {
-            //构建出属性的set方法
-            NSString *UpFirstKeyName = [NSString stringWithFormat:@"%@%@",[[keyName substringToIndex:1] uppercaseString],[keyName substringFromIndex:1]];//大写首字母，因为存在_所以无法使用capitalizedString
-            NSString *destMethodName = [NSString stringWithFormat:@"set%@:",UpFirstKeyName]; //capitalizedString返回每个单词首字母大写的字符串（每个单词的其余字母转换为小写）
-            SEL destMethodSelector = NSSelectorFromString(destMethodName);
-            
-            if ([self respondsToSelector:destMethodSelector]) {
-                
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                [self performSelector:destMethodSelector withObject:[dictionary objectForKey:keyName]];
-#pragma clang diagnostic pop
-                
+            id valueToSet;
+            if ([[dictionary objectForKey:keyName] isKindOfClass:[NSDictionary class]]) {
+                unsigned int outCount, i;
+                objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+                for (i = 0; i<outCount; i++)
+                {
+                    objc_property_t property = properties[i];
+                    const char* char_f =property_getName(property);
+                    NSString *propertyName = [NSString stringWithUTF8String:char_f];
+                    if ([propertyName isEqualToString:keyName]) {
+                        const char * type = property_getAttributes(property);
+                        NSString * typeString = [NSString stringWithUTF8String:type];
+                        NSArray * attributes = [typeString componentsSeparatedByString:@","];
+                        NSString * typeAttribute = [attributes objectAtIndex:0];
+                        if ([typeAttribute hasPrefix:@"T@"] && [typeAttribute length] > 1) {
+                            NSString * typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, [typeAttribute length]-4)];
+                            Class typeClass = NSClassFromString(typeClassName);
+                            if (typeClass != nil) {
+                                valueToSet = [[typeClass alloc] initWithDictionary:[dictionary objectForKey:keyName]];
+                            }
+                        }
+                        break;
+                    }
+                }
+            } else {
+                valueToSet = [dictionary objectForKey:keyName];
             }
-            
+            if (valueToSet) {
+                [self setValue:valueToSet forKey:keyName];
+            }
         }//end for
         return self;
-        
     }//end if
     return nil;
 }

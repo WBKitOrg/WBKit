@@ -11,8 +11,11 @@
 @interface NSObject (PropertyListing)
 
 -(BOOL)isKindOfData:(id)classtype;
-
--(NSDictionary *)propertyList;
 -(NSArray *)methodList;
+
+/*! @brief 将任何自定义对象转换成字典
+ * @note 如果本身已经是基本属性，则返回self
+ */
+-(id)propertyList;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 @end

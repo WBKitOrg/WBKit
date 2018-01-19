@@ -15,6 +15,7 @@
 		2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */; };
 		2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */; };
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
+		2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E82432010A1AF00C11DE0 /* DemoModel.m */; };
 		2D4AA6722007515A00613341 /* DemoIbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA6712007515A00613341 /* DemoIbView.m */; };
 		2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4AA677200861F800613341 /* UIControl+BlockedAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D4AA67A200861F800613341 /* UIControl+BlockedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA678200861F800613341 /* UIControl+BlockedAction.m */; };
@@ -167,6 +168,8 @@
 		2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WBAdditions.m"; sourceTree = "<group>"; };
 		2D3324291FCFAE8800DA53A9 /* UIImage+maskCut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+maskCut.h"; sourceTree = "<group>"; };
 		2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+maskCut.m"; sourceTree = "<group>"; };
+		2D3E82422010A1AF00C11DE0 /* DemoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
+		2D3E82432010A1AF00C11DE0 /* DemoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
 		2D4AA6702007515A00613341 /* DemoIbView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoIbView.h; sourceTree = "<group>"; };
 		2D4AA6712007515A00613341 /* DemoIbView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoIbView.m; sourceTree = "<group>"; };
 		2D4AA677200861F800613341 /* UIControl+BlockedAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+BlockedAction.h"; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
 				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
 				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
+				2D3E82422010A1AF00C11DE0 /* DemoModel.h */,
+				2D3E82432010A1AF00C11DE0 /* DemoModel.m */,
 				2D4AA6702007515A00613341 /* DemoIbView.h */,
 				2D4AA6712007515A00613341 /* DemoIbView.m */,
 				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
@@ -660,6 +665,7 @@
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
 				2DC7E9592004E2DD008904FD /* SkinModule.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
+				2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */,
 				2DBD7D2B1FF5EC4F00D1A967 /* DemoModule.m in Sources */,
 				2DBD7D171FF5EC1000D1A967 /* AppDelegate.m in Sources */,
 				2D4AA6722007515A00613341 /* DemoIbView.m in Sources */,
