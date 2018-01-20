@@ -10,7 +10,7 @@
 
 @protocol PropertyRedirect <NSObject>
 
-/*! @brief Examples
+/*! @brief 例子
  *
  *     + (NSDictionary *)keyNameForPropertyName {
  *         return @{
@@ -24,7 +24,15 @@
 
 @end
 
-@interface NSObject (PropertyListing) <PropertyRedirect>
+@protocol PropertyArrayWithModels <NSObject>
+
+@optional
+/*! @brief 数组属性中包含的model类型数组 */
++ (NSArray *)subModelsInArrayPropertis;
+
+@end
+
+@interface NSObject (PropertyListing) <PropertyRedirect, PropertyArrayWithModels>
 
 -(BOOL)isKindOfData:(id)classtype;
 -(NSArray *)methodList;

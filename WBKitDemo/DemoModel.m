@@ -13,6 +13,10 @@
 
 @end
 
+@implementation DemoSubModelInArray
+
+@end
+
 @implementation DemoModel
 
 + (NSDictionary *)keyNameForPropertyName
@@ -20,6 +24,11 @@
     return @{
              @"ID": @"id",
              };
+}
+
++ (NSArray *)subModelsInArrayPropertis
+{
+    return @[[DemoSubModelInArray class]];
 }
 
 @end

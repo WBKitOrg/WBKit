@@ -49,11 +49,24 @@
         if ([[[self class] keyNameForPropertyName] valueForKey:propertyName]) {
             redirectedKeyName = [[[self class] keyNameForPropertyName] valueForKey:propertyName];
         }
-        if (propertyValue) [props setObject:[propertyValue propertyList] forKey:redirectedKeyName.length>0?redirectedKeyName:propertyName];
+        if (propertyValue) {
+            if ([propertyValue isKindOfClass:[NSString class]]) {
+                [props setObject:propertyValue forKey:redirectedKeyName.length>0?redirectedKeyName:propertyName];
+            } else {
+                [props setObject:[propertyValue propertyList] forKey:redirectedKeyName.length>0?redirectedKeyName:propertyName];
+            }
+        }
     }
     free(properties);
     if (props.allKeys.count>0) {
         return props;
+    } else if ([self isKindOfClass:[NSArray class]]) {
+        //数组单独处理
+        NSMutableArray *array = [NSMutableArray array];
+        [self enumberateContainedObjects:^(NSInteger index, id object) {
+            [array addObject:[object propertyList]];
+        }];
+        return array;
     } else {
         return self;
     }
@@ -110,6 +123,13 @@
                 //没找到对应属性
             }
         }
+    } else if ([[dictionary objectForKey:dictKey] isKindOfClass:[NSArray class]]) {
+        NSArray *valueArray = [dictionary objectForKey:dictKey];
+        NSMutableArray *translatedArray = [NSMutableArray array];
+        [self enumberateArray:valueArray containedObjects:^(__unsafe_unretained Class type, id object) {
+            [translatedArray addObject:object];
+        }];
+        valueToSet = translatedArray;
     } else {
         //统一处理
         valueToSet = [dictionary objectForKey:dictKey];
@@ -147,6 +167,40 @@
     }
     
     return YES;
+}
+
+#pragma mark - 遍历
+
+- (void)enumberateContainedObjects:(void (^)(NSInteger index, id object))block
+{
+    if (![self isKindOfClass:[NSArray class]]) {
+        block(0, self);
+    } else {
+        NSInteger count = ((NSArray *)self).count;
+        for (NSInteger index = 0; index < count; ++index) {
+            id subObject = ((NSArray *)self)[index];
+            block(index, subObject);
+        }
+    }
+}
+
+- (void)enumberateArray:(NSArray *)array containedObjects:(void (^)(Class type, id object))block
+{
+    [array enumberateContainedObjects:^(NSInteger index, id object) {
+        id model;
+        if ([[self class] respondsToSelector:@selector(subModelsInArrayPropertis)]) {
+            for (Class type in [[self class] subModelsInArrayPropertis]) {
+                if ([object isKindOfData:type]) {
+                    model = [[type alloc] initWithDictionary:object];
+                    break;
+                }
+            }
+        }
+        if (!model) {
+            model = object;
+        }
+        block([model class], model);
+    }];
 }
 
 @end

@@ -44,6 +44,16 @@
     sub.propertyInt = 22;
     sub.propertyString = @"sub";
     model.propertySubModel = sub;
+    
+    NSMutableArray *ma = [NSMutableArray array];
+    for (int i=0; i<5; i++) {
+        DemoSubModelInArray *sa = [[DemoSubModelInArray alloc] init];
+        sa.name = [NSString stringWithFormat:@"%d个",i];
+        sa.index = i;
+        [ma addObject:sa];
+    }
+    model.propertyMutableArray = ma;
+    
     model.propertyNumber = @(11);
     model.ID = 10010;
     NSDictionary *dic = [model propertyList];

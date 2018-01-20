@@ -15,10 +15,18 @@
 
 @end
 
+@interface DemoSubModelInArray : NSObject
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) int index;
+
+@end
+
 @interface DemoModel : NSObject
 
 @property (nonatomic        ) NSInteger ID;
 @property (nonatomic, strong) DemoSubModel *propertySubModel;
 @property (nonatomic, strong) NSNumber *propertyNumber;
+@property (nonatomic, strong) NSMutableArray *propertyMutableArray;
 
 @end
