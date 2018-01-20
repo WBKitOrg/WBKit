@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DemoMessageListenner.h"
+#import "DemoModel.h"
 
 @interface ViewController ()
 
@@ -37,6 +38,29 @@
     UIView *view = [[UIView alloc] init];
     [view setFrame:CGRectMake(100, kNavigationBarHeight+250, kScreenWidth-200, 50)];
     [self.view addSubview:view];
+    
+    DemoModel *model = [[DemoModel alloc] init];
+    DemoSubModel *sub = [[DemoSubModel alloc] init];
+    sub.propertyInt = 22;
+    sub.propertyString = @"sub";
+    model.propertySubModel = sub;
+    
+    NSMutableArray *ma = [NSMutableArray array];
+    for (int i=0; i<5; i++) {
+        DemoSubModelInArray *sa = [[DemoSubModelInArray alloc] init];
+        sa.name = [NSString stringWithFormat:@"%d个",i];
+        sa.index = i;
+        [ma addObject:sa];
+    }
+    model.propertyMutableArray = ma;
+    
+    model.propertyNumber = @(11);
+    model.ID = 10010;
+    NSDictionary *dic = [model propertyList];
+    
+    DemoModel *modelBack = [[DemoModel alloc] initWithDictionary:dic];
+    
+    NSLog(@"modelBack.sub.int = %ld",modelBack.propertySubModel.propertyInt);
 }
 
 - (void)dealloc
