@@ -1,6 +1,8 @@
 # WBKit
 WBKit IOS framework
 ----------------------------
+* 2018.1.22
+增加了`NSObject+PropertyListing.h`，支持任意对象转字典，字典转任意对象。支持属性名转换字典key的时候重命名，支持数组装对象的多层嵌套。
 
 * 2018.1.12
 增加了`UIControl+BlockedAction`，支持UIControl的事件block化

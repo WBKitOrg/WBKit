@@ -321,8 +321,6 @@
 		2D3323E01FCC509300DA53A9 /* WBMessageRequestHelper */ = {
 			isa = PBXGroup;
 			children = (
-				2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */,
-				2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */,
 				2D3323E11FCC509300DA53A9 /* NSObject+MessageRequest.h */,
 				2D3323E21FCC509300DA53A9 /* NSObject+MessageRequest.m */,
 				2D3323E31FCC509300DA53A9 /* WBMessageTransferStation.h */,
@@ -423,6 +421,8 @@
 				2D3323E51FCC50A800DA53A9 /* NSDictionary+MutableCopy.m */,
 				2DBB21531FF21BDA00687B53 /* NSMutableArray+Unretain.h */,
 				2DBB21541FF21BDA00687B53 /* NSMutableArray+Unretain.m */,
+				2DC6E6AE1FFE4776004BAB1B /* NSObject+IdentifyHelper.h */,
+				2DC6E6AF1FFE4776004BAB1B /* NSObject+IdentifyHelper.m */,
 				2D3323E61FCC50A800DA53A9 /* NSObject+PropertyListing.h */,
 				2D3323E81FCC50A800DA53A9 /* NSObject+PropertyListing.m */,
 				2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */,
