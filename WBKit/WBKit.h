@@ -14,6 +14,7 @@
 #import "NSString+URLHelper.h"
 
 #import "NSDictionary+MutableCopy.h"
+#import "NSDictionary+JsonHelper.h"
 
 #import "NSMutableArray+Unretain.h"
 
@@ -46,6 +47,7 @@
 #import "WBService.h"
 #import "WBModule.h"
 #import "WBModuleManager.h"
+#import "WBWebBridge.h"
 
 #import "WBAppHelper.h"
 #import "WBGCD.h"
