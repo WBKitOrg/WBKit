@@ -66,6 +66,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSData *data = [NSJSONSerialization dataWithJSONObject:contentToSave options:kNilOptions error:nil];
+        [fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:NULL];
         BOOL ret = [fileManager createFileAtPath:[path stringByAppendingString:@".tmp"]
                                         contents:data
                                       attributes:nil];
