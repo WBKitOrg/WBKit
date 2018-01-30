@@ -1,6 +1,8 @@
 # WBKit
 WBKit IOS framework
 ----------------------------
+* 2018.1.30
+增加了`UITableViewCell+StaticHelper`，支持使用`UITableViewController`简单高效的制作静态table。暂时还未完善对`UIViewController`手动添加的tableview支持。
 
 * 2018.1.23
 增加了`WBWebBridge`，支持`WKWebView`与web页面之间的消息桥接。
