@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DemoStaticTableViewController.h"
 #import "DemoMessageListenner.h"
 #import "DemoModel.h"
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *routeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [routeButton setFrame:CGRectMake(100, kNavigationBarHeight+50, kScreenWidth-200, 50)];
@@ -35,9 +37,14 @@
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:messageButton];
     
-    UIView *view = [[UIView alloc] init];
-    [view setFrame:CGRectMake(100, kNavigationBarHeight+250, kScreenWidth-200, 50)];
-    [self.view addSubview:view];
+    UIButton *toStaticTableButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [toStaticTableButton setFrame:CGRectMake(100, kNavigationBarHeight+250, kScreenWidth-200, 50)];
+    [toStaticTableButton setTitle:@"静态tableViewController" forState:UIControlStateNormal];
+    [toStaticTableButton addAction:^{
+        DemoStaticTableViewController *staticTable = [[DemoStaticTableViewController alloc] init];
+        [weakSelf.navigationController pushViewController:staticTable animated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:toStaticTableButton];
     
     DemoModel *model = [DemoModel getFromDisk];
     if (!model) {

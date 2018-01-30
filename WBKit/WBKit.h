@@ -25,6 +25,7 @@
 #import "UIColor+WBAdditions.h"
 
 #import "UIViewController+WBLefeCircleEventManagement.h"
+#import "UITableViewController+StaticHelper.h"
 
 #import "UIImage+ClearImage.h"
 #import "UIImage+maskCut.h"

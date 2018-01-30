@@ -37,12 +37,6 @@ REGISTER_MODULE
         [button.layer setMasksToBounds:YES];
     }];
     
-    [UIView customizeForAppearance:^(UIView *appearance) {
-        UIView *view = appearance;
-        [view setBackgroundColor:[UIColor yellowColor]];
-        view.alpha = .2;
-    }];
-    
     [DemoIbView customizeForAppearance:^(UIView *appearance) {
         DemoIbView *ibView = (DemoIbView*)appearance;
         [ibView setBackgroundColor:[UIColor blueColor]];
