@@ -50,35 +50,40 @@
 - (UITableViewCell *)firstCell
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = @"代码初始化ViewController";
     cell.cellHeight = 40;
+    __weak typeof (self) weakSelf = self;
+    __weak typeof (cell) weakCell = cell;
     cell.cellDidSelect = ^{
+        [weakCell setSelected:NO animated:YES];
         ViewController *vc = [[ViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
     };
     return cell;
 }
 - (UITableViewCell *)secondCell
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = @"IB初始化ViewController";
     cell.cellHeight = 60;
+    __weak typeof (self) weakSelf = self;
+    __weak typeof (cell) weakCell = cell;
     cell.cellDidSelect = ^{
+        [weakCell setSelected:NO animated:YES];
         UIStoryboard *board = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
         ViewController *vc = [board instantiateViewControllerWithIdentifier:@"ViewController"];
-        [self.navigationController pushViewController:vc animated:YES];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
     };
     return cell;
 }
 - (UITableViewCell *)thirdCell
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = @"第三个cell";
     cell.cellHeight = 80;
+    __weak typeof (cell) weakCell = cell;
     cell.cellDidSelect = ^{
+        [weakCell setSelected:NO animated:YES];
         NSLog(@"thirdCellDidSelect");
     };
     return cell;

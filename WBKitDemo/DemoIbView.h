@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoIbView : UIView <WBIBSkinable>
+@interface DemoIbView : UIView
 
 @end

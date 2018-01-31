@@ -46,32 +46,35 @@
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:toStaticTableButton];
     
-    DemoModel *model = [DemoModel getFromDisk];
-    if (!model) {
-        model = [[DemoModel alloc] init];
-        DemoSubModel *sub = [[DemoSubModel alloc] init];
-        sub.propertyInt = 22;
-        sub.propertyString = @"sub";
-        model.propertySubModel = sub;
-        
-        NSMutableArray *ma = [NSMutableArray array];
-        for (int i=0; i<5; i++) {
-            DemoSubModelInArray *sa = [[DemoSubModelInArray alloc] init];
-            sa.name = [NSString stringWithFormat:@"%d个",i];
-            sa.index = i;
-            [ma addObject:sa];
-        }
-        model.propertyMutableArray = ma;
-        
-        model.propertyNumber = @(11);
-        model.ID = 10010;
-    }
-    NSDictionary *dic = [model propertyList];
-    DemoModel *modelBack = [[DemoModel alloc] initWithDictionary:dic];
-    [modelBack saveToDisk];
     
-    NSLog(@"dic = %@",dic);
-    NSLog(@"model = %@",modelBack.description);
+    self.addEventInLifeCircle(WBLifeCircleViewDidAppear, ^{
+        DemoModel *model = [DemoModel getFromDisk];
+        if (!model) {
+            model = [[DemoModel alloc] init];
+            DemoSubModel *sub = [[DemoSubModel alloc] init];
+            sub.propertyInt = 22;
+            sub.propertyString = @"sub";
+            model.propertySubModel = sub;
+            
+            NSMutableArray *ma = [NSMutableArray array];
+            for (int i=0; i<5; i++) {
+                DemoSubModelInArray *sa = [[DemoSubModelInArray alloc] init];
+                sa.name = [NSString stringWithFormat:@"%d个",i];
+                sa.index = i;
+                [ma addObject:sa];
+            }
+            model.propertyMutableArray = ma;
+            
+            model.propertyNumber = @(11);
+            model.ID = 10010;
+        }
+        NSDictionary *dic = [model propertyList];
+        DemoModel *modelBack = [[DemoModel alloc] initWithDictionary:dic];
+        [modelBack saveToDisk];
+        
+        NSLog(@"dic = %@",dic);
+        NSLog(@"model = %@",modelBack.description);
+    });
 }
 
 - (void)dealloc
