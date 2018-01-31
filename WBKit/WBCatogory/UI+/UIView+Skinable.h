@@ -8,14 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol WBIBSkinable <NSObject>
-
-@optional
--(void)ibDidInit;
-
-@end
-
-@interface UIView (Skinable) <WBIBSkinable>
+@interface UIView (Skinable)
 
 + (void)customizeForAppearance:(void (^)(UIView *appearance))customizeBlock;
 

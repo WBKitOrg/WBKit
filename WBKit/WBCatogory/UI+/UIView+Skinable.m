@@ -24,18 +24,28 @@ static NSMutableDictionary *wb_skinableClassesBlock;
 + (void)customizeForAppearance:(void (^)(UIView *appearance))customizeBlock
 {
     [[self wb_skinableClassesBlock] setObject:customizeBlock forKey:NSStringFromClass([self class])];
+    [self switchInitMethods];
 }
 
-+ (void)load
++ (void)switchInitMethods
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = self;
-        SEL originalSelector = @selector(initWithFrame:);
-        SEL swizzledSelector = @selector(wb_skinable_initWithFrame:);
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        method_exchangeImplementations(originalMethod, swizzledMethod);
+        if ([class instancesRespondToSelector:@selector(initWithFrame:)]) {
+            SEL originalSelector = @selector(initWithFrame:);
+            SEL swizzledSelector = @selector(wb_skinable_initWithFrame:);
+            Method originalMethod = class_getInstanceMethod(class, originalSelector);
+            Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+        if ([class instancesRespondToSelector:@selector(awakeFromNib)]) {
+            SEL originalSelector2 = @selector(awakeFromNib);
+            SEL swizzledSelector2 = @selector(wb_skinable_awakeFromNib);
+            Method originalMethod2 = class_getInstanceMethod(class, originalSelector2);
+            Method swizzledMethod2 = class_getInstanceMethod(class, swizzledSelector2);
+            method_exchangeImplementations(originalMethod2, swizzledMethod2);
+        }
     });
 }
 
@@ -49,11 +59,14 @@ static NSMutableDictionary *wb_skinableClassesBlock;
     return inst;
 }
 
-- (void)ibDidInit
+- (void)wb_skinable_awakeFromNib
 {
-    void (^customizeBlock)(UIView *appearance) = [[self class] wb_skinableClassesBlock][NSStringFromClass([self class])];
-    if (customizeBlock) {
-        customizeBlock(self);
+    if ([self respondsToSelector:@selector(wb_skinable_awakeFromNib)]) {
+        [self wb_skinable_awakeFromNib];
+        void (^customizeBlock)(UIView *appearance) = [[self class] wb_skinableClassesBlock][NSStringFromClass([self class])];
+        if (customizeBlock) {
+            customizeBlock(self);
+        }
     }
 }
 
