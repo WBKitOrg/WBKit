@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */; };
 		2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323CF1FCC4DAA00DA53A9 /* WBKit.m */; };
 		2D3323D11FCC4DAA00DA53A9 /* WBKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D3323CE1FCC4DAA00DA53A9 /* WBKit.h */; };
 		2D3324101FCC52B300DA53A9 /* WBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33240F1FCC52B300DA53A9 /* WBWebViewController.m */; };
@@ -127,6 +129,8 @@
 
 /* Begin PBXFileReference section */
 		070065E61FF4AB6A0059B62E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BadgeHelper.h"; sourceTree = "<group>"; };
+		2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadgeHelper.m"; sourceTree = "<group>"; };
 		2D3323CB1FCC4DAA00DA53A9 /* libWBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3323CE1FCC4DAA00DA53A9 /* WBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBKit.h; sourceTree = "<group>"; };
 		2D3323CF1FCC4DAA00DA53A9 /* WBKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBKit.m; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 				2D3323FF1FCC518900DA53A9 /* UIView+WBAnimationHelp.m */,
 				2DC7E9532004DF32008904FD /* UIView+Skinable.h */,
 				2DC7E9542004DF32008904FD /* UIView+Skinable.m */,
+				2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */,
+				2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */,
 				2D3324201FCFA5F300DA53A9 /* UILabel+htmlString.h */,
 				2D3324211FCFA5F300DA53A9 /* UILabel+htmlString.m */,
 				2D4AA677200861F800613341 /* UIControl+BlockedAction.h */,
@@ -580,6 +586,7 @@
 				2DAAAE33201F2338005F68D8 /* UITableViewCell+StaticHelper.h in Headers */,
 				2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
+				2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +693,7 @@
 				2D3324101FCC52B300DA53A9 /* WBWebViewController.m in Sources */,
 				2DF1C59A1FF4F9C2007BB079 /* WBURLRoute.m in Sources */,
 				2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */,
+				2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */,
 				2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */,
 				2DF1C58F1FF4F961007BB079 /* WBClipableViewController.m in Sources */,
 				2DF1C59E1FF4FA20007BB079 /* WBGCD.m in Sources */,

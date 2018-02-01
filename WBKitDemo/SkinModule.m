@@ -35,6 +35,11 @@ REGISTER_MODULE
         [button.layer setBorderWidth:1.0f];
         [button.layer setCornerRadius:25.0f];
         [button.layer setMasksToBounds:YES];
+        
+        [button setWb_badgeFontSize:12];
+        [button setWb_badgeColor:[UIColor brownColor]];
+        [button setWb_badgeContentColor:[UIColor yellowColor]];
+        [button wb_addBadgeAtPosition:WBBadgePositionTopRight];
     }];
     
     [DemoIbView customizeForAppearance:^(UIView *appearance) {

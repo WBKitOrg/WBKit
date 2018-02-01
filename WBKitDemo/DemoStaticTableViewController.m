@@ -103,7 +103,14 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = @"第五个cell";
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(50, 20, 150, 80)];
+    [button setTitle:@"第五个cell" forState:UIControlStateNormal];
+    [cell.contentView addSubview:button];
+    
+    [button wb_showBadgeWithContent:@"数太多了" animated:YES];
+    
     cell.cellHeight = 120;
     cell.cellDidSelect = ^{
         NSLog(@"fifthCellDidSelect");
