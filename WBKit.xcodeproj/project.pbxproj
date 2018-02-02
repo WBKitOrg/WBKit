@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */; };
 		2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */; };
 		2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323CF1FCC4DAA00DA53A9 /* WBKit.m */; };
@@ -129,6 +130,8 @@
 
 /* Begin PBXFileReference section */
 		070065E61FF4AB6A0059B62E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0722E69720245B45001700D1 /* UIButtonBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonBadgeViewController.h; sourceTree = "<group>"; };
+		0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonBadgeViewController.m; sourceTree = "<group>"; };
 		2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BadgeHelper.h"; sourceTree = "<group>"; };
 		2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadgeHelper.m"; sourceTree = "<group>"; };
 		2D3323CB1FCC4DAA00DA53A9 /* libWBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +262,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0722E69620245B2C001700D1 /* UIButtonBadge */ = {
+			isa = PBXGroup;
+			children = (
+				0722E69720245B45001700D1 /* UIButtonBadgeViewController.h */,
+				0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */,
+			);
+			path = UIButtonBadge;
+			sourceTree = "<group>";
+		};
 		2D3323C21FCC4DAA00DA53A9 = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +505,7 @@
 		2DBD7D141FF5EC1000D1A967 /* WBKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0722E69620245B2C001700D1 /* UIButtonBadge */,
 				2DBD7D151FF5EC1000D1A967 /* AppDelegate.h */,
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
 				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
@@ -734,6 +747,7 @@
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
 				2DC7E9592004E2DD008904FD /* SkinModule.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
+				0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */,
 				2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */,
 				2DBD7D2B1FF5EC4F00D1A967 /* DemoModule.m in Sources */,
 				2DBD7D171FF5EC1000D1A967 /* AppDelegate.m in Sources */,

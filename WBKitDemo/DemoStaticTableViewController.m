@@ -8,6 +8,7 @@
 
 #import "DemoStaticTableViewController.h"
 #import "ViewController.h"
+#import "UIButtonBadgeViewController.h"
 
 @interface DemoStaticTableViewController ()
 
@@ -103,21 +104,12 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:CGRectMake(50, 20, 150, 80)];
-    [button setTitle:@"第五个cell" forState:UIControlStateNormal];
-    [cell.contentView addSubview:button];
-    
-    [button setWb_badgeColor:[UIColor blueColor]];
-    [button setWb_badgeFontSize:0];
-    [button setWb_badgeInset:20];
-    [button setWb_borderInset:60];
-    [button wb_showBadgeWithContent:@"" animated:YES];
+    cell.textLabel.text = @"UIButton+badge";
     
     cell.cellHeight = 120;
     cell.cellDidSelect = ^{
-        NSLog(@"fifthCellDidSelect");
+        UIButtonBadgeViewController *buttonBadgeVC = [UIButtonBadgeViewController new];
+        [self.navigationController pushViewController:buttonBadgeVC animated:YES];
     };
     return cell;
 }
