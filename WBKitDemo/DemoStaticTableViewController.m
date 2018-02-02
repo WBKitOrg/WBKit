@@ -109,7 +109,11 @@
     [button setTitle:@"第五个cell" forState:UIControlStateNormal];
     [cell.contentView addSubview:button];
     
-    [button wb_showBadgeWithContent:@"数太多了" animated:YES];
+    [button setWb_badgeColor:[UIColor blueColor]];
+    [button setWb_badgeFontSize:0];
+    [button setWb_badgeInset:20];
+    [button setWb_borderInset:60];
+    [button wb_showBadgeWithContent:@"" animated:YES];
     
     cell.cellHeight = 120;
     cell.cellDidSelect = ^{
