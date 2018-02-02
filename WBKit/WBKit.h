@@ -33,6 +33,7 @@
 #import "UIView+WBAnimationHelp.h"
 #import "UIView+WBBlur.h"
 #import "UIView+Skinable.h"
+#import "UIView+BadgeHelper.h"
 
 #import "UILabel+htmlString.h"
 

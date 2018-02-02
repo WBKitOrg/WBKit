@@ -8,6 +8,7 @@
 
 #import "DemoStaticTableViewController.h"
 #import "ViewController.h"
+#import "UIButtonBadgeViewController.h"
 
 @interface DemoStaticTableViewController ()
 
@@ -103,10 +104,12 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = @"第五个cell";
+    cell.textLabel.text = @"UIButton+badge";
+    
     cell.cellHeight = 120;
     cell.cellDidSelect = ^{
-        NSLog(@"fifthCellDidSelect");
+        UIButtonBadgeViewController *buttonBadgeVC = [UIButtonBadgeViewController new];
+        [self.navigationController pushViewController:buttonBadgeVC animated:YES];
     };
     return cell;
 }
