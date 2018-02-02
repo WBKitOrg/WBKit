@@ -136,6 +136,7 @@
 
 - (void)wb_showBadgeWithContent:(NSString *)content animated:(BOOL)animated
 {
+    [self bringSubviewToFront:self.wb_badgeView]; 
     [self.wb_badgeView setTitle:content forState:UIControlStateNormal];
     if (animated) {
         [self.wb_badgeView showWithAnimation];
