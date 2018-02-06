@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */; };
+		2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1D88F32029862D00B1A778 /* WBSerialAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D1D88F62029862D00B1A778 /* WBSerialAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D88F42029862D00B1A778 /* WBSerialAction.m */; };
 		2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */; };
 		2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323CF1FCC4DAA00DA53A9 /* WBKit.m */; };
@@ -132,6 +134,8 @@
 		070065E61FF4AB6A0059B62E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0722E69720245B45001700D1 /* UIButtonBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonBadgeViewController.h; sourceTree = "<group>"; };
 		0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonBadgeViewController.m; sourceTree = "<group>"; };
+		2D1D88F32029862D00B1A778 /* WBSerialAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSerialAction.h; sourceTree = "<group>"; };
+		2D1D88F42029862D00B1A778 /* WBSerialAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSerialAction.m; sourceTree = "<group>"; };
 		2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BadgeHelper.h"; sourceTree = "<group>"; };
 		2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadgeHelper.m"; sourceTree = "<group>"; };
 		2D3323CB1FCC4DAA00DA53A9 /* libWBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +275,15 @@
 			path = UIButtonBadge;
 			sourceTree = "<group>";
 		};
+		2D1D88F2202985E600B1A778 /* WBSerialAction */ = {
+			isa = PBXGroup;
+			children = (
+				2D1D88F32029862D00B1A778 /* WBSerialAction.h */,
+				2D1D88F42029862D00B1A778 /* WBSerialAction.m */,
+			);
+			path = WBSerialAction;
+			sourceTree = "<group>";
+		};
 		2D3323C21FCC4DAA00DA53A9 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +363,7 @@
 		2D3323DF1FCC506100DA53A9 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				2D1D88F2202985E600B1A778 /* WBSerialAction */,
 				2D4100CB201624960009229E /* WBWebBridge */,
 				2DCD824E1FF3C65F004721DF /* WBModuleManager */,
 				2D3323E91FCC50BA00DA53A9 /* WBRoute */,
@@ -600,6 +614,7 @@
 				2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
 				2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */,
+				2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +713,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1D88F62029862D00B1A778 /* WBSerialAction.m in Sources */,
 				2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */,
 				2DC7E9562004DF32008904FD /* UIView+Skinable.m in Sources */,
 				2DC6E6B11FFE4776004BAB1B /* NSObject+IdentifyHelper.m in Sources */,

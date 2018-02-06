@@ -50,6 +50,7 @@
 #import "WBModule.h"
 #import "WBModuleManager.h"
 #import "WBWebBridge.h"
+#import "WBSerialAction.h"
 
 #import "WBAppHelper.h"
 #import "WBGCD.h"
