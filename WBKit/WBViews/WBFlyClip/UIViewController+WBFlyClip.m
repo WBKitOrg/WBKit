@@ -49,7 +49,7 @@ static CGFloat fc_margin_ = 0;
     [self WBFlyClip_zoomInComplete:nil];
 }
 
--(void)WBFlyClip_zoomInComplete:(void (^)())complete{
+-(void)WBFlyClip_zoomInComplete:(void (^)(void))complete{
     if ([self isZoomedIn]) {
         return;
     }
@@ -65,7 +65,7 @@ static CGFloat fc_margin_ = 0;
     [self WBFlyClip_zoomOutComplete:nil];
 }
 
--(void)WBFlyClip_zoomOutComplete:(void (^)())complete{
+-(void)WBFlyClip_zoomOutComplete:(void (^)(void))complete{
     if (![self isZoomedIn]) {
         return;
     }
@@ -78,17 +78,17 @@ static CGFloat fc_margin_ = 0;
     [self WBFlyClip_flyOutComplete:nil];
 }
 
-- (void (^)())fc_flyOutBlock {
+- (void (^)(void))fc_flyOutBlock {
     return objc_getAssociatedObject(self, flyoutBlockKey);
 }
 
-- (void)setFc_flyOutBlock:(void (^)())fc_flyOutBlock {
+- (void)setFc_flyOutBlock:(void (^)(void))fc_flyOutBlock {
     if (fc_flyOutBlock) {
         objc_setAssociatedObject(self, flyoutBlockKey, fc_flyOutBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     }
 }
 
--(void)WBFlyClip_flyOutComplete:(void (^)())complete{
+-(void)WBFlyClip_flyOutComplete:(void (^)(void))complete{
     if (![self isZoomedIn]) {
         return;
     }
@@ -105,7 +105,7 @@ static CGFloat fc_margin_ = 0;
 -(void)WBFlyClip_switchWithNodeId:(NSString *)nodeId{
     [self WBFlyClip_switchWithNodeId:nodeId complete:nil];
 }
--(void)WBFlyClip_switchWithNodeId:(NSString *)nodeId complete:(void (^)())complete{
+-(void)WBFlyClip_switchWithNodeId:(NSString *)nodeId complete:(void (^)(void))complete{
     if ([UIViewController currentViewController] == self && ![self isZoomedIn]) {//当前vc是缩小状态
         //得到需要缩小的vc
         UIViewController<WBFlyClipNodeProtocal> *nodeViewController = [[self class] WBFlyClip_ViewControllerForNodeId:nodeId];
@@ -126,9 +126,9 @@ static CGFloat fc_margin_ = 0;
     [self WBFlyClip_switchWithNodeController:nodeController complete:nil];
 }
 
--(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController complete:(void (^)())complete{
+-(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController complete:(void (^)(void))complete{
     
-    void (^switchComplete)();
+    void (^switchComplete)(void);
     
     if ([self isZoomedIn] && self.nodeGestureZoomOut) {
         [self setNodeGestureZoomOut:NO];
@@ -280,7 +280,7 @@ static CGFloat fc_margin_ = 0;
     [self closeAnimated:YES completion:nil];
 }
 
-- (void)closeAnimated:(BOOL)animated completion:(void (^)())completion
+- (void)closeAnimated:(BOOL)animated completion:(void (^)(void))completion
 {
     if (self.navigationController && self.navigationController.viewControllers.count > 1) {
         [self.navigationController popViewControllerAnimated:animated];

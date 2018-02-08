@@ -5,12 +5,7 @@
 //  Copyright © 2016年 wangbo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-typedef enum{
-    WBViewControllerAppearModal = 0,
-    WBViewControllerAppearPush,
-}WBViewControllerAppear;
+#import "WBFlyClipProtocolHeaders.h"
 
 @protocol WBFlyClipNodeProtocal <NSObject>
 
@@ -35,44 +30,33 @@ typedef enum{
 @end
 
 
-@protocol WBFlyClipNodeGestureHandler <NSObject>
-@optional
-@property (copy) void (^panGestureHandler)(UIPanGestureRecognizer *pan);
-@property (copy) void (^tapGestureHandler)(UITapGestureRecognizer *tap);
-
-@end
-
-
 @interface UIViewController (WBFlyClip)<WBFlyClipNodeProtocal,WBFlyClipNodeGestureHandler>
-
-
-
 
 /**
  * 关键方法，放大
  */
 -(void)WBFlyClip_zoomIn;
--(void)WBFlyClip_zoomInComplete:(void (^)())complete;
+-(void)WBFlyClip_zoomInComplete:(void (^)(void))complete;
 
 /**
  * 关键方法，缩小
  */
 -(void)WBFlyClip_zoomOut;
--(void)WBFlyClip_zoomOutComplete:(void (^)())complete;
+-(void)WBFlyClip_zoomOutComplete:(void (^)(void))complete;
 
 /**
  * 关键方法，移出
  */
 -(void)WBFlyClip_flyOut;
--(void)WBFlyClip_flyOutComplete:(void (^)())complete;
+-(void)WBFlyClip_flyOutComplete:(void (^)(void))complete;
 
 /**
  * 关键方法，交换,使用id只支持替换一个小窗口，使用controller可以小换大，大换小
  */
 -(void)WBFlyClip_switchWithNodeId:(NSString *)nodeId;
--(void)WBFlyClip_switchWithNodeId:(NSString *)nodeId complete:(void (^)())complete;
+-(void)WBFlyClip_switchWithNodeId:(NSString *)nodeId complete:(void (^)(void))complete;
 -(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController;
--(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController complete:(void (^)())complete;
+-(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController complete:(void (^)(void))complete;
 
 //全局设置
 //停靠margin
@@ -83,7 +67,7 @@ typedef enum{
 @property (nonatomic,assign) CGFloat fc_margin;
 
 
-@property (nonatomic,copy) void(^fc_flyOutBlock)();
+@property (nonatomic,copy) void(^fc_flyOutBlock)(void);
 
 /**
  * 需要使用的返回方法

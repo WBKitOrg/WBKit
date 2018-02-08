@@ -6,8 +6,7 @@
 //  Copyright © 2016年 tongboshu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "UIViewController+WBFlyClip.h"
+#import "WBFlyClipProtocolHeaders.h"
 
 @class WBClipableViewController;
 @protocol WBClipableViewControllerDelegate <NSObject>
