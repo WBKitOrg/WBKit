@@ -10,6 +10,7 @@
 		0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */; };
 		2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1D88F32029862D00B1A778 /* WBSerialAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D1D88F62029862D00B1A778 /* WBSerialAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D88F42029862D00B1A778 /* WBSerialAction.m */; };
+		2D1D88FD202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1D88FC202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */; };
 		2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323CF1FCC4DAA00DA53A9 /* WBKit.m */; };
@@ -136,6 +137,7 @@
 		0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonBadgeViewController.m; sourceTree = "<group>"; };
 		2D1D88F32029862D00B1A778 /* WBSerialAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSerialAction.h; sourceTree = "<group>"; };
 		2D1D88F42029862D00B1A778 /* WBSerialAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSerialAction.m; sourceTree = "<group>"; };
+		2D1D88FC202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFlyClipProtocolHeaders.h; sourceTree = "<group>"; };
 		2D300FA92023128500CE4B73 /* UIView+BadgeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BadgeHelper.h"; sourceTree = "<group>"; };
 		2D300FAA2023128500CE4B73 /* UIView+BadgeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadgeHelper.m"; sourceTree = "<group>"; };
 		2D3323CB1FCC4DAA00DA53A9 /* libWBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -417,6 +419,7 @@
 			children = (
 				2D3324041FCC51B000DA53A9 /* WBClipableViewController.h */,
 				2D3324051FCC51B000DA53A9 /* WBClipableViewController.m */,
+				2D1D88FC202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h */,
 				2D3324061FCC51B000DA53A9 /* UIViewController+WBFlyClip.h */,
 				2D3324071FCC51B000DA53A9 /* UIViewController+WBFlyClip.m */,
 				2D3324081FCC51B000DA53A9 /* WBFlyClipManager.h */,
@@ -592,6 +595,7 @@
 				2DBD7CF91FF5E32300D1A967 /* UIView+WBAnimationHelp.h in Headers */,
 				2DBD7CFA1FF5E32300D1A967 /* UILabel+htmlString.h in Headers */,
 				2DBD7CFB1FF5E32300D1A967 /* WBReloadScrollView.h in Headers */,
+				2D1D88FD202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h in Headers */,
 				2DBD7CFC1FF5E32300D1A967 /* WBClipableViewController.h in Headers */,
 				2DBD7CFD1FF5E32300D1A967 /* UIViewController+WBFlyClip.h in Headers */,
 				2D4100CE201625190009229E /* WBWebBridge.h in Headers */,

@@ -50,7 +50,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     [self zoomInViewController:viewController complete:nil];
 }
 
--(void)zoomInViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController complete:(void (^)())complete{
+-(void)zoomInViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController complete:(void (^)(void))complete{
     //如果存在一个vcid标注的node，返回不做处理
     if ([self managedControllerNodeshasNVCforID:viewController.nodeId]) {
         return;
@@ -93,7 +93,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     return [self zoomOutViewControllerWithID:vcid complete:nil];
 }
 
--(UIViewController *)zoomOutViewControllerWithID:(NSString *)vcid complete:(void (^)())complete{
+-(UIViewController *)zoomOutViewControllerWithID:(NSString *)vcid complete:(void (^)(void))complete{
     if (zoomAnimating) {
         return nil;
     }
@@ -158,7 +158,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     [self flyOutViewControllerWithID:vcid complete:nil];
 }
 
--(void)flyOutViewControllerWithID:(NSString *)vcid complete:(void (^)())complete{
+-(void)flyOutViewControllerWithID:(NSString *)vcid complete:(void (^)(void))complete{
     UIViewController<WBFlyClipNodeProtocal> *nodeVCToFlyOut = [self NodeControllerWithID:vcid];//需要移除的flyClipvc
     if (![objc_getAssociatedObject(nodeVCToFlyOut, @"isFlyingOut") boolValue]) {
         objc_setAssociatedObject(nodeVCToFlyOut, @"isFlyingOut", @(YES), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -194,7 +194,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     [self switchViewController:viewController withNodeControllerId:nodeId complete:nil];
 }
 
--(void)switchViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController withNodeControllerId:(NSString *)nodeId complete:(void (^)())complete{
+-(void)switchViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController withNodeControllerId:(NSString *)nodeId complete:(void (^)(void))complete{
     
     UIViewController<WBFlyClipNodeProtocal> *NodeVCToZoomout = [self NodeControllerWithID:nodeId];//需要放大的flyClipvc
     
@@ -202,7 +202,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     viewController.nodeFrame = CGRectMake(NodeVCToZoomout.nodeFrame.origin.x, NodeVCToZoomout.nodeFrame.origin.y, viewController.nodeFrame.size.width, viewController.nodeFrame.size.height);
     
     __weak typeof (self) WeakSelf = self;
-    void (^restoreBlock)() = ^{
+    void (^restoreBlock)(void) = ^{
         //由于modal出来的vc会有将window覆盖的可能，暂时着么改,将当前所有的小窗口移动到最上层
         for (UIViewController<WBFlyClipNodeProtocal> *flyclip in self.managedControllerNodes) {
             if (flyclip != NodeVCToZoomout) {
@@ -221,7 +221,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     };
     
     
-    void (^missingBlock)() = ^{
+    void (^missingBlock)(void) = ^{
         
         //加载到应用最上层window中
         [[UIApplication sharedApplication].keyWindow addSubview:viewController.view];
@@ -281,7 +281,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
 
 
 
--(void)missingNodeViewController:(UIViewController<WBFlyClipNodeProtocal> *)nodeVc complete:(void(^)())complete{
+-(void)missingNodeViewController:(UIViewController<WBFlyClipNodeProtocal> *)nodeVc complete:(void(^)(void))complete{
     //从当前控制器管理中移除
     
     //先判断是否有nav
@@ -307,7 +307,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     }
 }
 
--(void)restoreViewController:(UIViewController<WBFlyClipNodeProtocal> *)vc ToBaseViewController:(UIViewController *)baseVc complete:(void(^)())complete{
+-(void)restoreViewController:(UIViewController<WBFlyClipNodeProtocal> *)vc ToBaseViewController:(UIViewController *)baseVc complete:(void(^)(void))complete{
     if (baseVc.navigationController) {//存在navigation
         if (vc.nodeAppear == WBViewControllerAppearPush) {
             //需要放大的vc是navigationpush出来的

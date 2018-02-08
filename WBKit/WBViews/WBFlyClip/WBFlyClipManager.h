@@ -31,25 +31,25 @@
  *  @brief 缩小当前显示的viewcontroller
  */
 -(void)zoomInViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController;
--(void)zoomInViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController complete:(void (^)())complete;
+-(void)zoomInViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController complete:(void (^)(void))complete;
 
 /**
  *  @brief 根据一个vc的id放大一个缩小的vc并将其返回
  */
 -(UIViewController *)zoomOutViewControllerWithID:(NSString *)vcid;
--(UIViewController *)zoomOutViewControllerWithID:(NSString *)vcid complete:(void (^)())complete;
+-(UIViewController *)zoomOutViewControllerWithID:(NSString *)vcid complete:(void (^)(void))complete;
 
 /**
  *  @brief 根据一个vc的id移除一个缩小的vc
  */
 -(void)flyOutViewControllerWithID:(NSString *)vcid;
--(void)flyOutViewControllerWithID:(NSString *)vcid complete:(void (^)())complete;
+-(void)flyOutViewControllerWithID:(NSString *)vcid complete:(void (^)(void))complete;
 
 /**
  *  @brief 置换两个viewController
  */
 -(void)switchViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController withNodeControllerId:(NSString *)nodeId;
--(void)switchViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController withNodeControllerId:(NSString *)nodeId complete:(void (^)())complete;
+-(void)switchViewController:(UIViewController<WBFlyClipNodeProtocal> *)viewController withNodeControllerId:(NSString *)nodeId complete:(void (^)(void))complete;
 
 #pragma mark - 数据方法
 

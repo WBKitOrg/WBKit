@@ -7,6 +7,7 @@
 //
 
 #import "WBClipableViewController.h"
+#import "UIViewController+WBFlyClip.h"
 #import <objc/runtime.h>
 @interface WBClipableViewController ()
 
@@ -57,7 +58,7 @@
         NSLog(@"不能交换");
         return;
     }
-    void (^switchComplish)();
+    void (^switchComplish)(void);
     
     if ([self isZoomedIn] && self.enableClipGestureOut) {
         [self setEnableClipGestureOut:NO];
