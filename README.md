@@ -1,6 +1,12 @@
 # WBKit
 WBKit IOS framework
 ----------------------------
+* 2018.2.8
+增加了`WBSerialAction`，提供异步事件完成的回调block，能够将多个异步事件串行执行，提供打断与完成回调的方法，使用.语法实现串行调用，也可以单独添加任务进队列，暂时不支持插队。
+
+* 2018.2.2
+增加了`UIView+BadgeHelper`，可以对任意`UIView`子类增加badge，样式、颜色、内容见、位置、大小都可以自定义。
+
 * 2018.1.30
 增加了`UITableViewCell+StaticHelper`，支持使用`UITableViewController`简单高效的制作静态table。暂时还未完善对`UIViewController`手动添加的tableview支持。
 
