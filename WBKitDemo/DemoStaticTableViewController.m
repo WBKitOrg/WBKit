@@ -80,12 +80,46 @@
 - (UITableViewCell *)thirdCell
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = @"第三个cell";
+    cell.textLabel.text = @"测试串行事件";
     cell.cellHeight = 80;
     __weak typeof (cell) weakCell = cell;
     cell.cellDidSelect = ^{
         [weakCell setSelected:NO animated:YES];
-        NSLog(@"thirdCellDidSelect");
+        WBSerialAction *serialAction = [WBSerialAction sharedSerialAction];
+        id<WBSerialActionHandler> handler = serialAction.addAction(^(void (^complete)(void)){
+            NSLog(@"事件1开始");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                NSLog(@"事件1完成");
+                complete();
+            });
+        }).addAction(^(void (^complete)(void)){
+            NSLog(@"事件2开始");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                NSLog(@"事件2完成");
+                complete();
+            });
+        }).addAction(^(void (^complete)(void)){
+            NSLog(@"事件3开始");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                NSLog(@"事件3完成");
+                complete();
+            });
+        });
+        
+        [handler setComplte:^{
+            NSLog(@"串行事件完成");
+        }];
+        
+        NSLog(@"串行事件开始");
+        [handler start];
+        
+        serialAction.addAction(^(void (^complete)(void)){
+            NSLog(@"事件4开始");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                NSLog(@"事件4完成");
+                complete();
+            });
+        });
     };
     return cell;
 }
@@ -107,9 +141,10 @@
     cell.textLabel.text = @"UIButton+badge";
     
     cell.cellHeight = 120;
+    __weak typeof (self) weakSelf = self;
     cell.cellDidSelect = ^{
         UIButtonBadgeViewController *buttonBadgeVC = [UIButtonBadgeViewController new];
-        [self.navigationController pushViewController:buttonBadgeVC animated:YES];
+        [weakSelf.navigationController pushViewController:buttonBadgeVC animated:YES];
     };
     return cell;
 }
