@@ -6,6 +6,7 @@
 //
 
 #import "WBFlyClipManager.h"
+#import "UIViewController+FindCurrentHelper.h"
 #import <objc/runtime.h>
 
 

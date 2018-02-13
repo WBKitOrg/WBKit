@@ -6,6 +6,7 @@
 //
 
 #import "UIViewController+WBFlyClip.h"
+#import "UIViewController+FindCurrentHelper.h"
 #import <objc/runtime.h>
 #import "WBFlyClipManager.h"
 
@@ -208,8 +209,8 @@ static CGFloat fc_margin_ = 0;
 -(void)WBFlyClip_Tap:(UITapGestureRecognizer *)tap{
     
     //将tap手势传递出去
-    if (self.tapGestureHandler) {
-        self.tapGestureHandler(tap);
+    if (self.clip_tapGestureHandler) {
+        self.clip_tapGestureHandler(tap);
     }
     if (self.nodeGestureZoomOut) {
         [self WBFlyClip_zoomOut];
@@ -219,8 +220,8 @@ static CGFloat fc_margin_ = 0;
 -(void)WBFlyClip_NeedPanToMove:(UIPanGestureRecognizer *)pan{
     
     //将pan手势传递出去
-    if (self.panGestureHandler) {
-        self.panGestureHandler(pan);
+    if (self.clip_panGestureHandler) {
+        self.clip_panGestureHandler(pan);
     }
     
     if (pan.state == UIGestureRecognizerStateBegan) {
@@ -315,38 +316,6 @@ static CGFloat fc_margin_ = 0;
 + (UIViewController<WBFlyClipNodeProtocal> *)WBFlyClip_ViewControllerForNodeId:(NSString *)nodeId{
     return [[WBFlyClipManager sharedManager] NodeControllerWithID:nodeId];
 }
-
-#pragma mark - 工具方法找到当前的vc
-
-+ (UIViewController *)topViewController
-{
-    UIViewController *topViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    while (topViewController.presentedViewController) {
-        topViewController = topViewController.presentedViewController;
-    }
-    return topViewController;
-}
-
-+ (UIViewController *)currentViewController
-{
-    return [[self class] currentViewControllerWithRootViewController:[[self class] topViewController]];
-}
-
-+ (UIViewController*)currentViewControllerWithRootViewController:(UIViewController*)rootViewController {
-    if ([rootViewController isKindOfClass:[UITabBarController class]]) {
-        UITabBarController* tabBarController = (UITabBarController*)rootViewController;
-        return [self currentViewControllerWithRootViewController:tabBarController.selectedViewController];
-    } else if ([rootViewController isKindOfClass:[UINavigationController class]]) {
-        UINavigationController* navigationController = (UINavigationController*)rootViewController;
-        return [self currentViewControllerWithRootViewController:navigationController.visibleViewController];
-    } else if (rootViewController.presentedViewController) {
-        UIViewController* presentedViewController = rootViewController.presentedViewController;
-        return [self currentViewControllerWithRootViewController:presentedViewController];
-    } else {
-        return rootViewController;
-    }
-}
-
 
 #pragma mark - privateProperties
 
@@ -472,19 +441,19 @@ static char WBNodePanHandlerKey;
     return [nodeGestureFlyOutNum boolValue];
 }
 
--(void (^)(UITapGestureRecognizer *tap))tapGestureHandler{
+-(void (^)(UITapGestureRecognizer *tap))clip_tapGestureHandler{
     return objc_getAssociatedObject(self, &WBNodeTapHandlerKey);
 }
 
--(void)setTapGestureHandler:(void (^)(UITapGestureRecognizer *))tapGestureHandler{
+-(void)setClip_tapGestureHandler:(void (^)(UITapGestureRecognizer *))tapGestureHandler{
     objc_setAssociatedObject(self, &WBNodeTapHandlerKey, tapGestureHandler,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(void (^)(UIPanGestureRecognizer *pan))panGestureHandler{
+-(void (^)(UIPanGestureRecognizer *pan))clip_panGestureHandler{
     return objc_getAssociatedObject(self, &WBNodePanHandlerKey);
 }
 
--(void)setPanGestureHandler:(void (^)(UIPanGestureRecognizer *))panGestureHandler{
+-(void)setClip_panGestureHandler:(void (^)(UIPanGestureRecognizer *))panGestureHandler{
     objc_setAssociatedObject(self, &WBNodePanHandlerKey, panGestureHandler,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

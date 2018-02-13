@@ -84,10 +84,13 @@
 
 - (void)tryRoute
 {
-    //route的使用方式
-    [WBURLRoute openUrl:@"demo/test?id=1" params:@{@"testParam":@"xxx"} callback:^(NSDictionary *param) {
-        NSLog(@"getCallBack&Param = %@",param);
-    }];
+    
+    [WBURLRoute openUrl:@"flyclip/normalwindow/open"];
+    
+//    //route的使用方式
+//    [WBURLRoute openUrl:@"demo/test?id=1" params:@{@"testParam":@"xxx"} callback:^(NSDictionary *param) {
+//        NSLog(@"getCallBack&Param = %@",param);
+//    }];
 }
 
 - (void)tryMessage
