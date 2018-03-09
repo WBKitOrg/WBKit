@@ -21,6 +21,8 @@
 		2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */; };
 		2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */; };
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
+		2D3A3DD02052354F00A872DA /* UIGestureRecognizer+BlockedAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D3A3DD12052354F00A872DA /* UIGestureRecognizer+BlockedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */; };
 		2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E82432010A1AF00C11DE0 /* DemoModel.m */; };
 		2D4100CE201625190009229E /* WBWebBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4100CC201625190009229E /* WBWebBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D4100CF201625190009229E /* WBWebBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4100CD201625190009229E /* WBWebBridge.m */; };
@@ -196,6 +198,8 @@
 		2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WBAdditions.m"; sourceTree = "<group>"; };
 		2D3324291FCFAE8800DA53A9 /* UIImage+maskCut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+maskCut.h"; sourceTree = "<group>"; };
 		2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+maskCut.m"; sourceTree = "<group>"; };
+		2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+BlockedAction.h"; sourceTree = "<group>"; };
+		2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlockedAction.m"; sourceTree = "<group>"; };
 		2D3E82422010A1AF00C11DE0 /* DemoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
 		2D3E82432010A1AF00C11DE0 /* DemoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
 		2D4100CC201625190009229E /* WBWebBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWebBridge.h; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 				2D3324211FCFA5F300DA53A9 /* UILabel+htmlString.m */,
 				2D4AA677200861F800613341 /* UIControl+BlockedAction.h */,
 				2D4AA678200861F800613341 /* UIControl+BlockedAction.m */,
+				2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */,
+				2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */,
 				2DAAAE38201F5D2B005F68D8 /* WBStaticTableViewHelper */,
 			);
 			path = "UI+";
@@ -644,6 +650,7 @@
 				2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */,
 				2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */,
 				2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */,
+				2D3A3DD02052354F00A872DA /* UIGestureRecognizer+BlockedAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +761,7 @@
 				2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */,
 				2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */,
 				2DF1C58F1FF4F961007BB079 /* WBClipableViewController.m in Sources */,
+				2D3A3DD12052354F00A872DA /* UIGestureRecognizer+BlockedAction.m in Sources */,
 				2DF1C59E1FF4FA20007BB079 /* WBGCD.m in Sources */,
 				2DF1C5921FF4F986007BB079 /* WBCaptureView.m in Sources */,
 				2DF1C58C1FF4F951007BB079 /* UIImage+ClearImage.m in Sources */,

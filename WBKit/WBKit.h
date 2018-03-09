@@ -39,6 +39,7 @@
 #import "UILabel+htmlString.h"
 
 #import "UIControl+BlockedAction.h"
+#import "UIGestureRecognizer+BlockedAction.h"
 
 #import "WBReloadScrollView.h"
 #import "WBClipableViewController.h"

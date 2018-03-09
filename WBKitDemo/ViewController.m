@@ -75,6 +75,13 @@
         NSLog(@"dic = %@",dic);
         NSLog(@"model = %@",modelBack.description);
     });
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithHandler:^{
+        NSLog(@"didTap");
+    }];
+    
+    [self.view addGestureRecognizer:tap];
+    
 }
 
 - (void)dealloc
