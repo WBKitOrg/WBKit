@@ -25,6 +25,7 @@
 #import "UIColor+WBAdditions.h"
 
 #import "UIViewController+WBLefeCircleEventManagement.h"
+#import "UIViewController+FindCurrentHelper.h"
 #import "UITableViewController+StaticHelper.h"
 
 #import "UIImage+ClearImage.h"
@@ -38,6 +39,7 @@
 #import "UILabel+htmlString.h"
 
 #import "UIControl+BlockedAction.h"
+#import "UIGestureRecognizer+BlockedAction.h"
 
 #import "WBReloadScrollView.h"
 #import "WBClipableViewController.h"

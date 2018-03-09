@@ -1,6 +1,10 @@
 # WBKit
 WBKit IOS framework
 ----------------------------
+
+* 2018.3.9
+增加了`UIGestureRecognizer+BlockedAction`，支持UIGestureRecognizer的事件block化
+
 * 2018.2.8
 增加了`WBSerialAction`，提供异步事件完成的回调block，能够将多个异步事件串行执行，提供打断与完成回调的方法，使用.语法实现串行调用，也可以单独添加任务进队列，暂时不支持插队。
 

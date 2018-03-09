@@ -28,9 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //初始化靠边弹性0.2,在wbflyclip中默认0.5,保留个人对弹性动画美感的理解
-    self.nodeSpringDamping = 0.2;
-    self.clipId = [NSString stringWithFormat:@"%@=====%lf",NSStringFromClass([self class]),[NSDate date].timeIntervalSince1970];
 }
 
 - (void)didReceiveMemoryWarning {

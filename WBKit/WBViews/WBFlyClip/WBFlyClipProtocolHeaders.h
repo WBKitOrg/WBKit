@@ -18,8 +18,8 @@ typedef enum{
 
 @protocol WBFlyClipNodeGestureHandler <NSObject>
 @optional
-@property (copy) void (^panGestureHandler)(UIPanGestureRecognizer *pan);
-@property (copy) void (^tapGestureHandler)(UITapGestureRecognizer *tap);
+@property (copy) void (^clip_panGestureHandler)(UIPanGestureRecognizer *pan);
+@property (copy) void (^clip_tapGestureHandler)(UITapGestureRecognizer *tap);
 
 @end
 

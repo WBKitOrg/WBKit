@@ -14,6 +14,12 @@
 @property (nonatomic , assign)WBViewControllerAppear nodeAppear;
 @property (nonatomic , assign) CGRect nodeFrame;
 @property (nonatomic , assign) CGFloat nodeSpringDamping;//默认0.5
+@property (nonatomic,assign) CGFloat fc_margin; //停靠margin
+#warning TODO:改到代理中
+@property (nonatomic,copy) void(^fc_flyOutBlock)(void);
+
+//全局设置
+@property (class) CGFloat fc_margin; //停靠margin
 
 -(void)setNodeFrame:(CGRect)frame animated:(BOOL)animated;
 
@@ -58,17 +64,6 @@
 -(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController;
 -(void)WBFlyClip_switchWithNodeController:(UIViewController<WBFlyClipNodeProtocal> *)nodeController complete:(void (^)(void))complete;
 
-//全局设置
-//停靠margin
-@property (class) CGFloat fc_margin;
-
-//实例设置
-//停靠margin
-@property (nonatomic,assign) CGFloat fc_margin;
-
-
-@property (nonatomic,copy) void(^fc_flyOutBlock)(void);
-
 /**
  * 需要使用的返回方法
  */
@@ -82,11 +77,6 @@
 #pragma mark - 找到所有小窗口
 + (NSArray *)WBFlyClip_ViewControlerIds;
 + (UIViewController<WBFlyClipNodeProtocal> *)WBFlyClip_ViewControllerForNodeId:(NSString *)nodeId;
-
-#pragma mark - 找到当前viewcontroller
-+ (UIViewController *)topViewController;
-+ (UIViewController *)currentViewController;
-+ (UIViewController *)currentViewControllerWithRootViewController:(UIViewController*)rootViewController;
 
 @end
 

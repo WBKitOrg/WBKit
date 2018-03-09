@@ -21,6 +21,8 @@
 		2D3324281FCFA93C00DA53A9 /* UIColor+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */; };
 		2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */; };
 		2D33242C1FCFAFA900DA53A9 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3323EB1FCC50BA00DA53A9 /* NSString+URLHelper.m */; };
+		2D3A3DD02052354F00A872DA /* UIGestureRecognizer+BlockedAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D3A3DD12052354F00A872DA /* UIGestureRecognizer+BlockedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */; };
 		2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E82432010A1AF00C11DE0 /* DemoModel.m */; };
 		2D4100CE201625190009229E /* WBWebBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4100CC201625190009229E /* WBWebBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D4100CF201625190009229E /* WBWebBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4100CD201625190009229E /* WBWebBridge.m */; };
@@ -29,6 +31,10 @@
 		2D4AA6722007515A00613341 /* DemoIbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA6712007515A00613341 /* DemoIbView.m */; };
 		2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4AA677200861F800613341 /* UIControl+BlockedAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D4AA67A200861F800613341 /* UIControl+BlockedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA678200861F800613341 /* UIControl+BlockedAction.m */; };
+		2D76165420329B1D00EDFCAB /* WBFlyClipDemoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D76165320329B1D00EDFCAB /* WBFlyClipDemoModule.m */; };
+		2D76165720329D2100EDFCAB /* WBFlyClipDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D76165620329D2100EDFCAB /* WBFlyClipDemoViewController.m */; };
+		2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7616582032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D76165B2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7616592032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m */; };
 		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
 		2DAAAE2F201F1CFE005F68D8 /* UITableViewController+StaticHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAAAE2D201F1CFE005F68D8 /* UITableViewController+StaticHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAAAE30201F1CFE005F68D8 /* UITableViewController+StaticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE2E201F1CFE005F68D8 /* UITableViewController+StaticHelper.m */; };
@@ -192,6 +198,8 @@
 		2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WBAdditions.m"; sourceTree = "<group>"; };
 		2D3324291FCFAE8800DA53A9 /* UIImage+maskCut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+maskCut.h"; sourceTree = "<group>"; };
 		2D33242A1FCFAE8800DA53A9 /* UIImage+maskCut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+maskCut.m"; sourceTree = "<group>"; };
+		2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+BlockedAction.h"; sourceTree = "<group>"; };
+		2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlockedAction.m"; sourceTree = "<group>"; };
 		2D3E82422010A1AF00C11DE0 /* DemoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
 		2D3E82432010A1AF00C11DE0 /* DemoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
 		2D4100CC201625190009229E /* WBWebBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWebBridge.h; sourceTree = "<group>"; };
@@ -202,6 +210,12 @@
 		2D4AA6712007515A00613341 /* DemoIbView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoIbView.m; sourceTree = "<group>"; };
 		2D4AA677200861F800613341 /* UIControl+BlockedAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+BlockedAction.h"; sourceTree = "<group>"; };
 		2D4AA678200861F800613341 /* UIControl+BlockedAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BlockedAction.m"; sourceTree = "<group>"; };
+		2D76165220329B1D00EDFCAB /* WBFlyClipDemoModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFlyClipDemoModule.h; sourceTree = "<group>"; };
+		2D76165320329B1D00EDFCAB /* WBFlyClipDemoModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBFlyClipDemoModule.m; sourceTree = "<group>"; };
+		2D76165520329D2100EDFCAB /* WBFlyClipDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFlyClipDemoViewController.h; sourceTree = "<group>"; };
+		2D76165620329D2100EDFCAB /* WBFlyClipDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBFlyClipDemoViewController.m; sourceTree = "<group>"; };
+		2D7616582032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FindCurrentHelper.h"; sourceTree = "<group>"; };
+		2D7616592032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FindCurrentHelper.m"; sourceTree = "<group>"; };
 		2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+WBAdditions.h"; sourceTree = "<group>"; };
 		2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WBAdditions.m"; sourceTree = "<group>"; };
 		2DAAAE2D201F1CFE005F68D8 /* UITableViewController+StaticHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+StaticHelper.h"; sourceTree = "<group>"; };
@@ -449,6 +463,8 @@
 			children = (
 				2D3323F01FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.h */,
 				2D3323F11FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.m */,
+				2D7616582032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h */,
+				2D7616592032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m */,
 				2D3323FD1FCC518900DA53A9 /* UIImage+ClearImage.h */,
 				2D3323FC1FCC518900DA53A9 /* UIImage+ClearImage.m */,
 				2D3324291FCFAE8800DA53A9 /* UIImage+maskCut.h */,
@@ -463,6 +479,8 @@
 				2D3324211FCFA5F300DA53A9 /* UILabel+htmlString.m */,
 				2D4AA677200861F800613341 /* UIControl+BlockedAction.h */,
 				2D4AA678200861F800613341 /* UIControl+BlockedAction.m */,
+				2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */,
+				2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */,
 				2DAAAE38201F5D2B005F68D8 /* WBStaticTableViewHelper */,
 			);
 			path = "UI+";
@@ -506,6 +524,17 @@
 			path = WBWebBridge;
 			sourceTree = "<group>";
 		};
+		2D761651203299E000EDFCAB /* WBFlyClipDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2D76165220329B1D00EDFCAB /* WBFlyClipDemoModule.h */,
+				2D76165320329B1D00EDFCAB /* WBFlyClipDemoModule.m */,
+				2D76165520329D2100EDFCAB /* WBFlyClipDemoViewController.h */,
+				2D76165620329D2100EDFCAB /* WBFlyClipDemoViewController.m */,
+			);
+			path = WBFlyClipDemo;
+			sourceTree = "<group>";
+		};
 		2DAAAE38201F5D2B005F68D8 /* WBStaticTableViewHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +551,7 @@
 		2DBD7D141FF5EC1000D1A967 /* WBKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2D761651203299E000EDFCAB /* WBFlyClipDemo */,
 				0722E69620245B2C001700D1 /* UIButtonBadge */,
 				2DBD7D151FF5EC1000D1A967 /* AppDelegate.h */,
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
@@ -619,6 +649,8 @@
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
 				2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */,
 				2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */,
+				2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */,
+				2D3A3DD02052354F00A872DA /* UIGestureRecognizer+BlockedAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +761,7 @@
 				2D300FAC2023128500CE4B73 /* UIView+BadgeHelper.m in Sources */,
 				2D33242B1FCFAE8800DA53A9 /* UIImage+maskCut.m in Sources */,
 				2DF1C58F1FF4F961007BB079 /* WBClipableViewController.m in Sources */,
+				2D3A3DD12052354F00A872DA /* UIGestureRecognizer+BlockedAction.m in Sources */,
 				2DF1C59E1FF4FA20007BB079 /* WBGCD.m in Sources */,
 				2DF1C5921FF4F986007BB079 /* WBCaptureView.m in Sources */,
 				2DF1C58C1FF4F951007BB079 /* UIImage+ClearImage.m in Sources */,
@@ -752,6 +785,7 @@
 				2DF1C59C1FF4FA19007BB079 /* WBMessageTransferStation.m in Sources */,
 				2DF1C5941FF4F98C007BB079 /* UIView+WBBlur.m in Sources */,
 				2D4100CF201625190009229E /* WBWebBridge.m in Sources */,
+				2D76165B2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m in Sources */,
 				2DF1C58B1FF4F94E007BB079 /* UIViewController+WBLefeCircleEventManagement.m in Sources */,
 				2D3324251FCFA6E100DA53A9 /* NSString+DecodingXMLEntities.m in Sources */,
 				2D4100D3201634BA0009229E /* NSDictionary+JsonHelper.m in Sources */,
@@ -764,8 +798,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */,
+				2D76165420329B1D00EDFCAB /* WBFlyClipDemoModule.m in Sources */,
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
 				2DC7E9592004E2DD008904FD /* SkinModule.m in Sources */,
+				2D76165720329D2100EDFCAB /* WBFlyClipDemoViewController.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
 				0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */,
 				2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */,
