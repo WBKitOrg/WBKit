@@ -206,6 +206,7 @@
 
 #pragma mark - 重写方法
 
+//该方法不适合放在catogory中，应该放在model父类中重写
 //- (NSUInteger)hash {
 //    NSUInteger value = 0;
 //

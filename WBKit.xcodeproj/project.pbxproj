@@ -461,6 +461,7 @@
 		2D33241E1FCFA59800DA53A9 /* UI+ */ = {
 			isa = PBXGroup;
 			children = (
+				2DAAAE38201F5D2B005F68D8 /* WBStaticTableViewHelper */,
 				2D3323F01FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.h */,
 				2D3323F11FCC50CD00DA53A9 /* UIViewController+WBLefeCircleEventManagement.m */,
 				2D7616582032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h */,
@@ -481,7 +482,6 @@
 				2D4AA678200861F800613341 /* UIControl+BlockedAction.m */,
 				2D3A3DCE2052354F00A872DA /* UIGestureRecognizer+BlockedAction.h */,
 				2D3A3DCF2052354F00A872DA /* UIGestureRecognizer+BlockedAction.m */,
-				2DAAAE38201F5D2B005F68D8 /* WBStaticTableViewHelper */,
 			);
 			path = "UI+";
 			sourceTree = "<group>";
