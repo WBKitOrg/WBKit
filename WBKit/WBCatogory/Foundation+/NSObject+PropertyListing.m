@@ -123,6 +123,7 @@
                 //没找到对应属性
             }
         }
+        free(properties);
     } else if ([[dictionary objectForKey:dictKey] isKindOfClass:[NSArray class]]) {
         NSArray *valueArray = [dictionary objectForKey:dictKey];
         NSMutableArray *translatedArray = [NSMutableArray array];
@@ -202,5 +203,26 @@
         block([model class], model);
     }];
 }
+
+#pragma mark - 重写方法
+
+//该方法不适合放在catogory中，应该放在model父类中重写
+//- (NSUInteger)hash {
+//    NSUInteger value = 0;
+//
+//    unsigned int outCount, i;
+//    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+//    for (i = 0; i<outCount; i++)
+//    {
+//        objc_property_t property = properties[i];
+//        const char* char_f =property_getName(property);
+//        NSString *propertyName = [NSString stringWithUTF8String:char_f];
+//        id propertyValue = [self valueForKey:(NSString *)propertyName];
+//        value ^= [propertyValue hash];
+//    }
+//    free(properties);
+//    
+//    return value;
+//}
 
 @end
