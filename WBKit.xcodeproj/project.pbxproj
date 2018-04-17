@@ -294,8 +294,18 @@
 		07FE789F2085CAC9003680D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				07FE78A02085CAE7003680D7 /* DemoStaticTableViewController.h */,
-				07FE78A12085CAE7003680D7 /* DemoStaticTableViewController.m */,
+				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
+				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
+				2D3E82422010A1AF00C11DE0 /* DemoModel.h */,
+				2D3E82432010A1AF00C11DE0 /* DemoModel.m */,
+				2D4AA6702007515A00613341 /* DemoIbView.h */,
+				2D4AA6712007515A00613341 /* DemoIbView.m */,
+				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
+				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
+				2DC7E9572004E2DD008904FD /* SkinModule.h */,
+				2DC7E9582004E2DD008904FD /* SkinModule.m */,
+				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
+				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -560,23 +570,13 @@
 		2DBD7D141FF5EC1000D1A967 /* WBKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				07FE78A02085CAE7003680D7 /* DemoStaticTableViewController.h */,
+				07FE78A12085CAE7003680D7 /* DemoStaticTableViewController.m */,
 				07FE789F2085CAC9003680D7 /* Home */,
 				2D761651203299E000EDFCAB /* WBFlyClipDemo */,
 				0722E69620245B2C001700D1 /* UIButtonBadge */,
 				2DBD7D151FF5EC1000D1A967 /* AppDelegate.h */,
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
-				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
-				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
-				2D3E82422010A1AF00C11DE0 /* DemoModel.h */,
-				2D3E82432010A1AF00C11DE0 /* DemoModel.m */,
-				2D4AA6702007515A00613341 /* DemoIbView.h */,
-				2D4AA6712007515A00613341 /* DemoIbView.m */,
-				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
-				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
-				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
-				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
-				2DC7E9572004E2DD008904FD /* SkinModule.h */,
-				2DC7E9582004E2DD008904FD /* SkinModule.m */,
 				2DBD7D1B1FF5EC1000D1A967 /* Main.storyboard */,
 				2DBD7D1E1FF5EC1000D1A967 /* Assets.xcassets */,
 				2DBD7D201FF5EC1000D1A967 /* LaunchScreen.storyboard */,
