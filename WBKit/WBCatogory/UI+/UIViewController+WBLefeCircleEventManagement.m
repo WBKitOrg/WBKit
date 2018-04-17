@@ -41,7 +41,7 @@ static char WBLifeCircleViewDidDisappearKey;
 -(void)WBviewWillAppear:(BOOL)animated{
     [self WBviewWillAppear:animated];
     //do what I want in viewWillAppear
-    for (void(^event)() in self.willAppearEvents) {
+    for (void(^event)(void) in self.willAppearEvents) {
         event();
     }
     //清空数组
@@ -51,7 +51,7 @@ static char WBLifeCircleViewDidDisappearKey;
 -(void)WBviewDidAppear:(BOOL)animated{
     [self WBviewDidAppear:animated];
     //do what I want in viewDidAppear
-    for (void(^event)() in self.didAppearEvents) {
+    for (void(^event)(void) in self.didAppearEvents) {
         event();
     }
     //清空数组
@@ -61,7 +61,7 @@ static char WBLifeCircleViewDidDisappearKey;
 -(void)WBviewWillDisappear:(BOOL)animated{
     [self WBviewWillDisappear:animated];
     //do what I want in viewWillDisappear
-    for (void(^event)() in self.willDisappearEvents) {
+    for (void(^event)(void) in self.willDisappearEvents) {
         event();
     }
     //清空数组
@@ -71,7 +71,7 @@ static char WBLifeCircleViewDidDisappearKey;
 -(void)WBviewDidDisappear:(BOOL)animated{
     [self WBviewDidDisappear:animated];
     //do what I want in viewDidDisappear
-    for (void(^event)() in self.didDisappearEvents) {
+    for (void(^event)(void) in self.didDisappearEvents) {
         event();
     }
     //清空数组
@@ -81,8 +81,8 @@ static char WBLifeCircleViewDidDisappearKey;
 
 #pragma mark - addEventFunction
 
--(void (^)(WBLifeCircle lc,void(^event)()))addEventInLifeCircle{
-    return ^ (WBLifeCircle lc,void(^event)()){
+-(void (^)(WBLifeCircle lc,void(^event)(void)))addEventInLifeCircle{
+    return ^ (WBLifeCircle lc,void(^event)(void)){
         //添加事件进入对应数组
         switch (lc) {
             case WBLifeCircleViewWillAppear:

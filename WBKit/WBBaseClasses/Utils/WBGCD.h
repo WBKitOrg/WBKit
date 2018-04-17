@@ -39,7 +39,7 @@
 
 #pragma mark - 对单独使用的支持
 - (instancetype)init;
-- (instancetype)initSerial;
+//- (instancetype)initSerial;
 - (instancetype)initSerialWithLabel:(NSString *)label;
 - (instancetype)initConcurrent;
 - (instancetype)initConcurrentWithLabel:(NSString *)label;

@@ -196,7 +196,7 @@
     [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
 }
 
-- (void)takePhoto:(void (^)(UIImage *photo))getPhoto restartControl:(void (^)(void (^restart)()))restartControlBlock{
+- (void)takePhoto:(void (^)(UIImage *photo))getPhoto restartControl:(void (^)(void (^restart)(void)))restartControlBlock{
     AVCaptureConnection * videoConnection = [self.imageOutPut connectionWithMediaType:AVMediaTypeVideo];
     if (!videoConnection) {
         NSLog(@"Take photo failed!");

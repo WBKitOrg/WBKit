@@ -29,6 +29,6 @@ typedef enum{
 /**
  * @brief 使用方式:    self.addEventInLifeCircle(WBLifeCircleViewWillAppear,^{});
  */
--(void (^)(WBLifeCircle lc,void(^event)()))addEventInLifeCircle;
+-(void (^)(WBLifeCircle lc,void(^event)(void)))addEventInLifeCircle;
 
 @end
