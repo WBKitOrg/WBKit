@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
+
+    
 //  1.默认样式，SkinModule中设置
     UIButton *buttonOne = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonOne setFrame:CGRectMake(50, 120, 150, 80)];

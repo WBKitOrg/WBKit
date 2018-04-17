@@ -17,10 +17,8 @@ static const int32_t defaultNodeGap          = 10;
 static const int32_t defaultNodeTabbarHeight = 50;
 
 @interface WBFlyClipManager ()
-{
-    BOOL zoomAnimating;
-}
 
+@property (nonatomic,assign)BOOL zoomAnimating;
 @end
 
 @implementation WBFlyClipManager
@@ -57,7 +55,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
         return;
     }
     
-    if (zoomAnimating) {
+    if (self.zoomAnimating) {
         return;
     }
     
@@ -69,7 +67,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
         [[UIApplication sharedApplication].keyWindow addSubview:viewController.view];
         [viewController.view.layer setMasksToBounds:YES];
         
-        zoomAnimating = YES;
+        self.zoomAnimating = YES;
         //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //            zoomAnimating = NO;
         //        });
@@ -81,7 +79,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
             }
             [viewController.view setFrame:viewController.nodeFrame];
         } completion:^(BOOL finished) {
-            zoomAnimating = NO;
+            self.zoomAnimating = NO;
             if (complete) {
                 complete();
             }
@@ -95,7 +93,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
 }
 
 -(UIViewController *)zoomOutViewControllerWithID:(NSString *)vcid complete:(void (^)(void))complete{
-    if (zoomAnimating) {
+    if (self.zoomAnimating) {
         return nil;
     }
     UIViewController<WBFlyClipNodeProtocal> *NodeVCToZoomout = [self NodeControllerWithID:vcid];//需要放大的flyClipvc
@@ -109,7 +107,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     }
     
     //放大事件触发时间
-    zoomAnimating = YES;
+    self.zoomAnimating = YES;
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        zoomAnimating = NO;
 //    });
@@ -141,7 +139,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
             //还原完成之后移除nodevc
             [WeakSelf.managedControllerNodes removeObject:NodeVCToZoomout];
             
-            zoomAnimating = NO;
+            self.zoomAnimating = NO;
             
             if (complete) {
                 complete();
@@ -214,7 +212,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
         //还原完成之后移除nodevc
         [WeakSelf.managedControllerNodes removeObject:NodeVCToZoomout];
         
-        zoomAnimating = NO;
+        self.zoomAnimating = NO;
         
         if (complete) {
             complete();
@@ -228,7 +226,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
         [[UIApplication sharedApplication].keyWindow addSubview:viewController.view];
         [viewController.view.layer setMasksToBounds:YES];
 
-        zoomAnimating = YES;
+        self.zoomAnimating = YES;
         
         //将当前所有的小窗口移动到最上层,将要放大的view必须放在当前window最下层，否则会覆盖其他的flyClip
         for (UIViewController<WBFlyClipNodeProtocal> *flyclip in self.managedControllerNodes) {
@@ -270,7 +268,7 @@ static const int32_t defaultNodeTabbarHeight = 50;
     if ([self managedControllerNodeshasNVCforID:viewController.nodeId]) {
         return;
     }
-    if (zoomAnimating) {
+    if (self.zoomAnimating) {
         return;
     }
     //添加进managedControllerNodes中，保持活跃
