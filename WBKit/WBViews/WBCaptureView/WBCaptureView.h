@@ -47,7 +47,7 @@
  *  @param getPhoto 得到相片的callBack
  *  @param restartControlBlock 恢复显示控制器
  */
-- (void)takePhoto:(void (^)(UIImage *photo))getPhoto restartControl:(void (^)(void (^restart)()))restartControlBlock;
+- (void)takePhoto:(void (^)(UIImage *photo))getPhoto restartControl:(void (^)(void (^restart)(void)))restartControlBlock;
 
 /**
  *  @brief 摄像开始

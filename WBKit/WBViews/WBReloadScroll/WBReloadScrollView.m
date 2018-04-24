@@ -51,44 +51,44 @@
 }
 
 -(void)reloadData{
-    if (isReloading) {
+    if (self.isReloading) {
         return;
     }
-    isReloading = YES;
+    self.isReloading = YES;
     
-    numberOfItemsInScroll = (int)[self.WBReloadScrollDataSource NumberOfCellInScrolllView:self];
+    self.numberOfItemsInScroll = (int)[self.WBReloadScrollDataSource NumberOfCellInScrolllView:self];
     
-    if (numberOfItemsInScroll<=1) {//只有1页
-        firstPage = nil;
-        if ([self checkPageUsable:_currentIndex]) {
-            middlePage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex];
+    if (self.numberOfItemsInScroll<=1) {//只有1页
+        self.firstPage = nil;
+        if ([self checkPageUsable:self.currentIndex]) {
+            self.middlePage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex];
         }else{
-           middlePage = nil;
+           self.middlePage = nil;
         }
-        lastPage = nil;
+        self.lastPage = nil;
         [self layoutViews];
     }else{
         if ([self checkPageUsable:_currentIndex-1]) {//如果前一页可用
-            firstPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex-1];
+            self.firstPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex-1];
         }else{//如果前一页不可用
-            if (_recirculate) {//循环滚动
-                firstPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:[self.WBReloadScrollDataSource NumberOfCellInScrolllView:self]-1];
+            if (self.recirculate) {//循环滚动
+                self.firstPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:[self.WBReloadScrollDataSource NumberOfCellInScrolllView:self]-1];
             }else{//不可循环滚动
-                firstPage = nil;
+                self.firstPage = nil;
             }
         }
         
         if ([self checkPageUsable:_currentIndex]) {//当前页可用
-            middlePage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex];
+            self.middlePage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:self.currentIndex];
         }
         
         if ([self checkPageUsable:_currentIndex+1]) {//后一页可用
-            lastPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex+1];
+            self.lastPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:_currentIndex+1];
         }else{//后一页不可用
             if (_recirculate) {//循环滚动
-                lastPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:0];
+                self.lastPage = [self.WBReloadScrollDataSource WBReloadScrollView:self ViewAtIndex:0];
             }else{
-                lastPage = nil;
+                self.lastPage = nil;
             }
         }
         
@@ -99,20 +99,20 @@
 -(void)layoutViews{
     
     if (_recirculate) {
-        [firstPage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        [middlePage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-        [lastPage setFrame:CGRectMake(self.frame.size.width*2, 0, self.frame.size.width, self.frame.size.height)];
+        [self.firstPage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        [self.middlePage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+        [self.lastPage setFrame:CGRectMake(self.frame.size.width*2, 0, self.frame.size.width, self.frame.size.height)];
     }else{
-        if (!firstPage) {
-            [middlePage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-            [lastPage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-        }else if (!lastPage){
-            [firstPage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-            [middlePage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+        if (!self.firstPage) {
+            [self.middlePage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+            [self.lastPage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+        }else if (!self.lastPage){
+            [self.firstPage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+            [self.middlePage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
         }else{
-            [firstPage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-            [middlePage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-            [lastPage setFrame:CGRectMake(self.frame.size.width*2, 0, self.frame.size.width, self.frame.size.height)];
+            [self.firstPage setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+            [self.middlePage setFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+            [self.lastPage setFrame:CGRectMake(self.frame.size.width*2, 0, self.frame.size.width, self.frame.size.height)];
         }
     }
     
@@ -127,21 +127,21 @@
     }
     
     
-    if (firstPage) {
-        [self addSubview:firstPage];
+    if (self.firstPage) {
+        [self addSubview:self.firstPage];
 //        [firstPage setUserInteractionEnabled:YES];
 //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
 //        [firstPage addGestureRecognizer:tap];
     }
-    if (middlePage) {
-        [self addSubview:middlePage];
+    if (self.middlePage) {
+        [self addSubview:self.middlePage];
 //        [middlePage setUserInteractionEnabled:YES];
 //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
 //        [middlePage addGestureRecognizer:tap];
     }
     
-    if (lastPage) {
-        [self addSubview:lastPage];
+    if (self.lastPage) {
+        [self addSubview:self.lastPage];
 //        [lastPage setUserInteractionEnabled:YES];
 //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
 //        [lastPage addGestureRecognizer:tap];
@@ -149,21 +149,21 @@
     
     //仅在实现点击回调事件的时候添加手势，防止手势冲突
     if ([self.WBReloadScrollDelegate respondsToSelector:@selector(WBReloadScrollView:DidSelectAtIndex:)]) {
-        if (firstPage) {
-            [firstPage setUserInteractionEnabled:YES];
+        if (self.firstPage) {
+            [self.firstPage setUserInteractionEnabled:YES];
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-            [firstPage addGestureRecognizer:tap];
+            [self.firstPage addGestureRecognizer:tap];
         }
-        if (middlePage) {
-            [middlePage setUserInteractionEnabled:YES];
+        if (self.middlePage) {
+            [self.middlePage setUserInteractionEnabled:YES];
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-            [middlePage addGestureRecognizer:tap];
+            [self.middlePage addGestureRecognizer:tap];
         }
         
-        if (lastPage) {
-            [lastPage setUserInteractionEnabled:YES];
+        if (self.lastPage) {
+            [self.lastPage setUserInteractionEnabled:YES];
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-            [lastPage addGestureRecognizer:tap];
+            [self.lastPage addGestureRecognizer:tap];
         }
     }
     
@@ -172,13 +172,13 @@
         [self setContentSize:CGSizeMake(self.frame.size.width*3, self.frame.size.height)];
         [self setContentOffset:CGPointMake(self.frame.size.width, 0)];
     }else{
-        if (!firstPage) {
+        if (!self.firstPage) {
             [self setContentSize:CGSizeMake(self.frame.size.width*2, self.frame.size.height)];
-            if (!lastPage) {//只有一页
+            if (!self.lastPage) {//只有一页
                 [self setContentSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
             }
             [self setContentOffset:CGPointMake(0, 0)];
-        }else if (!lastPage){
+        }else if (!self.lastPage){
             [self setContentSize:CGSizeMake(self.frame.size.width*2, self.frame.size.height)];
             [self setContentOffset:CGPointMake(self.frame.size.width, 0)];
         }else{
@@ -219,7 +219,7 @@
     /**
      * layout 结束后reloading完成
      */
-    isReloading = NO;
+    self.isReloading = NO;
 }
 
 -(void)setScrollWithIndex:(int)index{
@@ -246,7 +246,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if ([self.WBReloadScrollDelegate respondsToSelector:@selector(WBReloadScrollView:DidEndScrollingAnimationAtIndex:)]) {
-            [self.WBReloadScrollDelegate WBReloadScrollView:self DidEndScrollingAnimationAtIndex:_currentIndex];
+            [self.WBReloadScrollDelegate WBReloadScrollView:self DidEndScrollingAnimationAtIndex:self.currentIndex];
         }
     });
     
@@ -262,11 +262,11 @@
 -(void)tap:(id)sender{
     UIGestureRecognizer *gr = sender;
     if ([self.WBReloadScrollDelegate respondsToSelector:@selector(WBReloadScrollView:DidSelectAtIndex:)]) {
-        if ([gr.view isEqual:firstPage]) {
+        if ([gr.view isEqual:self.firstPage]) {
             [self.WBReloadScrollDelegate WBReloadScrollView:self DidSelectAtIndex:_currentIndex-1];
-        }else if ([gr.view isEqual:middlePage]){
+        }else if ([gr.view isEqual:self.middlePage]){
             [self.WBReloadScrollDelegate WBReloadScrollView:self DidSelectAtIndex:_currentIndex];
-        }else if ([gr.view isEqual:lastPage]){
+        }else if ([gr.view isEqual:self.lastPage]){
             [self.WBReloadScrollDelegate WBReloadScrollView:self DidSelectAtIndex:_currentIndex+1];
         }
 
@@ -285,7 +285,7 @@
     
     if (x<=0) {
         if (_currentIndex>0) {
-            if (isReloading) {//这里的代码是因为在非循环的情况下最后一页向前滑动的时候在reloading的情况下会两次进入这里，原因是在layout方法中setcontentsize在前，在contentoffset在后。而这俩方法貌似不会阻塞滑动线程，所以这里两次进入了导致出错！！
+            if (self.isReloading) {//这里的代码是因为在非循环的情况下最后一页向前滑动的时候在reloading的情况下会两次进入这里，原因是在layout方法中setcontentsize在前，在contentoffset在后。而这俩方法貌似不会阻塞滑动线程，所以这里两次进入了导致出错！！
                 return;
             }
             _currentIndex--;
@@ -369,16 +369,16 @@
 #pragma mark - 自动滚动设置
 
 -(void)startAutoRun{
-    running = YES;
+    self.running = YES;
     
-    if (HasTimeRunner) {
+    if (self.HasTimeRunner) {
         return;
     }
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         while (true) {
-            HasTimeRunner = YES;
+            self.HasTimeRunner = YES;
             [NSThread sleepForTimeInterval:self.autoRunSeconds];
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -404,8 +404,8 @@
                 }
                 
             });
-            if (!running) {
-                HasTimeRunner = NO;
+            if (!self.running) {
+                self.HasTimeRunner = NO;
                 break;
             }
         }
@@ -414,14 +414,14 @@
 
 }
 -(void)stopAutoRun{
-    running = NO;
+    self.running = NO;
 }
 
 
 #pragma mark - 重写事件
 -(void)removeFromSuperview{
     [super removeFromSuperview];
-    running = NO;
+    self.running = NO;
     _WBReloadScrollDelegate = nil;
     _WBReloadScrollDataSource = nil;
 }

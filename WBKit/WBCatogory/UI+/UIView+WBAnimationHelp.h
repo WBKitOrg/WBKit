@@ -20,7 +20,7 @@
  */
 -(void)ChangePositionToView:(UIView *)view duration:(float)du;
 
--(void)CommitflipAnimationFromLeftComplete:(void(^)())complete;
--(void)CommitflipAnimationFromRightComplete:(void(^)())complete;
+-(void)CommitflipAnimationFromLeftComplete:(void(^)(void))complete;
+-(void)CommitflipAnimationFromRightComplete:(void(^)(void))complete;
 
 @end

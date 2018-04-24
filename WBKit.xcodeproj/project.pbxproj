@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */; };
+		07F220E62086D94B00CAB7E6 /* WBModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F220E52086D94B00CAB7E6 /* WBModelView.m */; };
+		07FE78A22085CAE7003680D7 /* DemoStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FE78A12085CAE7003680D7 /* DemoStaticTableViewController.m */; };
 		2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1D88F32029862D00B1A778 /* WBSerialAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D1D88F62029862D00B1A778 /* WBSerialAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D88F42029862D00B1A778 /* WBSerialAction.m */; };
 		2D1D88FD202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1D88FC202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,7 +42,6 @@
 		2DAAAE30201F1CFE005F68D8 /* UITableViewController+StaticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE2E201F1CFE005F68D8 /* UITableViewController+StaticHelper.m */; };
 		2DAAAE33201F2338005F68D8 /* UITableViewCell+StaticHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAAAE31201F2338005F68D8 /* UITableViewCell+StaticHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAAAE34201F2338005F68D8 /* UITableViewCell+StaticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE32201F2338005F68D8 /* UITableViewCell+StaticHelper.m */; };
-		2DAAAE37201F29BD005F68D8 /* DemoStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE36201F29BD005F68D8 /* DemoStaticTableViewController.m */; };
 		2DAAAE3B201F5D80005F68D8 /* WBStaticTableViewHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAAAE39201F5D80005F68D8 /* WBStaticTableViewHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAAAE3C201F5D80005F68D8 /* WBStaticTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE3A201F5D80005F68D8 /* WBStaticTableViewHelper.m */; };
 		2DACDDC51FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACDDC41FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.m */; };
@@ -141,6 +142,10 @@
 		070065E61FF4AB6A0059B62E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0722E69720245B45001700D1 /* UIButtonBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonBadgeViewController.h; sourceTree = "<group>"; };
 		0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonBadgeViewController.m; sourceTree = "<group>"; };
+		07F220E42086D94B00CAB7E6 /* WBModelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModelView.h; sourceTree = "<group>"; };
+		07F220E52086D94B00CAB7E6 /* WBModelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBModelView.m; sourceTree = "<group>"; };
+		07FE78A02085CAE7003680D7 /* DemoStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoStaticTableViewController.h; sourceTree = "<group>"; };
+		07FE78A12085CAE7003680D7 /* DemoStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoStaticTableViewController.m; sourceTree = "<group>"; };
 		2D1D88F32029862D00B1A778 /* WBSerialAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBSerialAction.h; sourceTree = "<group>"; };
 		2D1D88F42029862D00B1A778 /* WBSerialAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBSerialAction.m; sourceTree = "<group>"; };
 		2D1D88FC202BEFD200B1A778 /* WBFlyClipProtocolHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFlyClipProtocolHeaders.h; sourceTree = "<group>"; };
@@ -222,8 +227,6 @@
 		2DAAAE2E201F1CFE005F68D8 /* UITableViewController+StaticHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+StaticHelper.m"; sourceTree = "<group>"; };
 		2DAAAE31201F2338005F68D8 /* UITableViewCell+StaticHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+StaticHelper.h"; sourceTree = "<group>"; };
 		2DAAAE32201F2338005F68D8 /* UITableViewCell+StaticHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+StaticHelper.m"; sourceTree = "<group>"; };
-		2DAAAE35201F29BD005F68D8 /* DemoStaticTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoStaticTableViewController.h; sourceTree = "<group>"; };
-		2DAAAE36201F29BD005F68D8 /* DemoStaticTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoStaticTableViewController.m; sourceTree = "<group>"; };
 		2DAAAE39201F5D80005F68D8 /* WBStaticTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStaticTableViewHelper.h; sourceTree = "<group>"; };
 		2DAAAE3A201F5D80005F68D8 /* WBStaticTableViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStaticTableViewHelper.m; sourceTree = "<group>"; };
 		2DACDDC31FE7BEEC00BCE0A5 /* NSObject+SaveToDisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SaveToDisk.h"; sourceTree = "<group>"; };
@@ -289,6 +292,34 @@
 				0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */,
 			);
 			path = UIButtonBadge;
+			sourceTree = "<group>";
+		};
+		07F220E72087536500CAB7E6 /* WBModelView */ = {
+			isa = PBXGroup;
+			children = (
+				07F220E42086D94B00CAB7E6 /* WBModelView.h */,
+				07F220E52086D94B00CAB7E6 /* WBModelView.m */,
+			);
+			path = WBModelView;
+			sourceTree = "<group>";
+		};
+		07FE789F2085CAC9003680D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
+				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
+				2D3E82422010A1AF00C11DE0 /* DemoModel.h */,
+				2D3E82432010A1AF00C11DE0 /* DemoModel.m */,
+				2D4AA6702007515A00613341 /* DemoIbView.h */,
+				2D4AA6712007515A00613341 /* DemoIbView.m */,
+				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
+				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
+				2DC7E9572004E2DD008904FD /* SkinModule.h */,
+				2DC7E9582004E2DD008904FD /* SkinModule.m */,
+				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
+				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		2D1D88F2202985E600B1A778 /* WBSerialAction */ = {
@@ -379,6 +410,7 @@
 		2D3323DF1FCC506100DA53A9 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				07F220E72087536500CAB7E6 /* WBModelView */,
 				2D1D88F2202985E600B1A778 /* WBSerialAction */,
 				2D4100CB201624960009229E /* WBWebBridge */,
 				2DCD824E1FF3C65F004721DF /* WBModuleManager */,
@@ -551,24 +583,13 @@
 		2DBD7D141FF5EC1000D1A967 /* WBKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				07FE78A02085CAE7003680D7 /* DemoStaticTableViewController.h */,
+				07FE78A12085CAE7003680D7 /* DemoStaticTableViewController.m */,
+				07FE789F2085CAC9003680D7 /* Home */,
 				2D761651203299E000EDFCAB /* WBFlyClipDemo */,
 				0722E69620245B2C001700D1 /* UIButtonBadge */,
 				2DBD7D151FF5EC1000D1A967 /* AppDelegate.h */,
 				2DBD7D161FF5EC1000D1A967 /* AppDelegate.m */,
-				2DBD7D181FF5EC1000D1A967 /* ViewController.h */,
-				2DBD7D191FF5EC1000D1A967 /* ViewController.m */,
-				2DAAAE35201F29BD005F68D8 /* DemoStaticTableViewController.h */,
-				2DAAAE36201F29BD005F68D8 /* DemoStaticTableViewController.m */,
-				2D3E82422010A1AF00C11DE0 /* DemoModel.h */,
-				2D3E82432010A1AF00C11DE0 /* DemoModel.m */,
-				2D4AA6702007515A00613341 /* DemoIbView.h */,
-				2D4AA6712007515A00613341 /* DemoIbView.m */,
-				2DC6E6B21FFE4DB0004BAB1B /* DemoMessageListenner.h */,
-				2DC6E6B31FFE4DB0004BAB1B /* DemoMessageListenner.m */,
-				2DBD7D291FF5EC4F00D1A967 /* DemoModule.h */,
-				2DBD7D2A1FF5EC4F00D1A967 /* DemoModule.m */,
-				2DC7E9572004E2DD008904FD /* SkinModule.h */,
-				2DC7E9582004E2DD008904FD /* SkinModule.m */,
 				2DBD7D1B1FF5EC1000D1A967 /* Main.storyboard */,
 				2DBD7D1E1FF5EC1000D1A967 /* Assets.xcassets */,
 				2DBD7D201FF5EC1000D1A967 /* LaunchScreen.storyboard */,
@@ -699,7 +720,7 @@
 		2D3323C31FCC4DAA00DA53A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = wangbo;
 				TargetAttributes = {
 					2D3323CA1FCC4DAA00DA53A9 = {
@@ -799,16 +820,17 @@
 			files = (
 				2DC6E6B41FFE4DB0004BAB1B /* DemoMessageListenner.m in Sources */,
 				2D76165420329B1D00EDFCAB /* WBFlyClipDemoModule.m in Sources */,
+				07FE78A22085CAE7003680D7 /* DemoStaticTableViewController.m in Sources */,
 				2DBD7D1A1FF5EC1000D1A967 /* ViewController.m in Sources */,
 				2DC7E9592004E2DD008904FD /* SkinModule.m in Sources */,
 				2D76165720329D2100EDFCAB /* WBFlyClipDemoViewController.m in Sources */,
 				2DBD7D251FF5EC1000D1A967 /* main.m in Sources */,
 				0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */,
+				07F220E62086D94B00CAB7E6 /* WBModelView.m in Sources */,
 				2D3E82442010A1AF00C11DE0 /* DemoModel.m in Sources */,
 				2DBD7D2B1FF5EC4F00D1A967 /* DemoModule.m in Sources */,
 				2DBD7D171FF5EC1000D1A967 /* AppDelegate.m in Sources */,
 				2D4AA6722007515A00613341 /* DemoIbView.m in Sources */,
-				2DAAAE37201F29BD005F68D8 /* DemoStaticTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +878,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -863,6 +886,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -911,6 +935,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -918,6 +943,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

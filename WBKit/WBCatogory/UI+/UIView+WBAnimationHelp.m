@@ -48,7 +48,7 @@
 
 
 
--(void)CommitflipAnimationFromLeftComplete:(void (^)())complete{
+-(void)CommitflipAnimationFromLeftComplete:(void (^)(void))complete{
     [UIView transitionWithView:self duration:0.25 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
     } completion:^(BOOL finished) {
         if (complete) {
@@ -57,7 +57,7 @@
     }];
 }
 
--(void)CommitflipAnimationFromRightComplete:(void (^)())complete{
+-(void)CommitflipAnimationFromRightComplete:(void (^)(void))complete{
     [UIView transitionWithView:self duration:0.25 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
     } completion:^(BOOL finished) {
         if (complete) {

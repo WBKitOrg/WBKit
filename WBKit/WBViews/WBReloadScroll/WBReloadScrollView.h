@@ -30,22 +30,35 @@
 
 
 @interface WBReloadScrollView : UIScrollView<UIScrollViewDelegate,UIGestureRecognizerDelegate>
-{
-    UIView *firstPage;
-    UIView *middlePage;
-    UIView *lastPage;
-    
-    //设置自动滚动
-    BOOL running;
-    BOOL HasTimeRunner;
-    
-    /**
-     *  1.1修改了一个bug 在不能循环滚动的时候最后一屏幕前滚会多次进入，所以在加载的时候禁止第二次重加载
-     */
-    BOOL isReloading;
-    
-    int numberOfItemsInScroll;
-}
+
+@property (nonatomic , strong) UIView *firstPage;
+@property (nonatomic , strong) UIView *middlePage;
+@property (nonatomic , strong) UIView *lastPage;
+//设置自动滚动
+@property (nonatomic , assign) BOOL running;
+@property (nonatomic , assign) BOOL HasTimeRunner;
+/**
+ *  1.1修改了一个bug 在不能循环滚动的时候最后一屏幕前滚会多次进入，所以在加载的时候禁止第二次重加载
+ */
+@property (nonatomic , assign) BOOL isReloading;
+@property (nonatomic , assign) int numberOfItemsInScroll;
+//
+//{
+//    UIView *firstPage;
+//    UIView *middlePage;
+//    UIView *lastPage;
+//
+//    //设置自动滚动
+//    BOOL running;
+//    BOOL HasTimeRunner;
+//
+//    /**
+//     *  1.1修改了一个bug 在不能循环滚动的时候最后一屏幕前滚会多次进入，所以在加载的时候禁止第二次重加载
+//     */
+//    BOOL isReloading;
+//
+//    int numberOfItemsInScroll;
+//}
 
 @property (nonatomic , assign) id<WBReloadScrollViewDelegate> WBReloadScrollDelegate;
 @property (nonatomic , assign) id<WBReloadScrollViewDataSource> WBReloadScrollDataSource;
