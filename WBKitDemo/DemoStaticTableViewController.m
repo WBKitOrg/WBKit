@@ -9,6 +9,7 @@
 #import "DemoStaticTableViewController.h"
 #import "ViewController.h"
 #import "UIButtonBadgeViewController.h"
+#import "WBModelView.h"
 
 @interface DemoStaticTableViewController ()
 
@@ -30,6 +31,7 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [UIView new];
+
     
     NSMutableArray *section1 = [NSMutableArray arrayWithCapacity:3];
     [section1 addObject:[self firstCell]];
@@ -85,38 +87,51 @@
     __weak typeof (cell) weakCell = cell;
     cell.cellDidSelect = ^{
         [weakCell setSelected:NO animated:YES];
+        
+        WBModelView *modelView = [WBModelView show];
+
         WBSerialAction *serialAction = [WBSerialAction sharedSerialAction];
         id<WBSerialActionHandler> handler = serialAction.addAction(^(void (^complete)(void)){
             NSLog(@"事件1开始");
+            [modelView addWithString:@"1"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSLog(@"事件1完成");
+                [modelView addWithString:@"1"];
                 complete();
             });
         }).addAction(^(void (^complete)(void)){
             NSLog(@"事件2开始");
+            [modelView addWithString:@"2"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSLog(@"事件2完成");
+                [modelView addWithString:@"2"];
                 complete();
             });
         }).addAction(^(void (^complete)(void)){
             NSLog(@"事件3开始");
+            [modelView addWithString:@"3"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSLog(@"事件3完成");
+                [modelView addWithString:@"3"];
                 complete();
             });
         });
         
         [handler setComplte:^{
             NSLog(@"串行事件完成");
+            [modelView addWithString:@"完成"];
         }];
         
         NSLog(@"串行事件开始");
+        [modelView addWithString:@"开始"];
         [handler start];
         
         serialAction.addAction(^(void (^complete)(void)){
             NSLog(@"事件4开始");
+            [modelView addWithString:@"4"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSLog(@"事件4完成");
+                [modelView addWithString:@"4"];
                 complete();
             });
         });

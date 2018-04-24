@@ -38,12 +38,14 @@
     [buttonTwo setTitle:@"左下角badge" forState:UIControlStateNormal];
     [self.view addSubview:buttonTwo];
     //重置badge样式
+    __weak typeof(self) weakself = self;
     UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [addButton setFrame:CGRectMake(20, 240, 30, 30)];
     [addButton setTitle:@"+" forState:UIControlStateNormal];
     [addButton addAction:^{
-        self.badgeCount++;
-        [buttonTwo wb_showBadgeWithContent:[NSString stringWithFormat:@"%d",self.badgeCount] animated:YES];
+        __strong __typeof(weakself)strongSelf = weakself;
+        strongSelf.badgeCount++;
+        [buttonTwo wb_showBadgeWithContent:[NSString stringWithFormat:@"%d",strongSelf.badgeCount] animated:YES];
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
     
@@ -51,11 +53,12 @@
     [downButton setFrame:CGRectMake(60, 240, 30, 30)];
     [downButton setTitle:@"-" forState:UIControlStateNormal];
     [downButton addAction:^{
-        self.badgeCount--;
-        if(self.badgeCount == 0){
+        __strong __typeof(weakself)strongSelf = weakself;
+        strongSelf.badgeCount--;
+        if(strongSelf.badgeCount == 0){
             [buttonTwo wb_hideBadgeAnimated:YES];
         }else{
-            [buttonTwo wb_showBadgeWithContent:[NSString stringWithFormat:@"%d",self.badgeCount] animated:YES];
+            [buttonTwo wb_showBadgeWithContent:[NSString stringWithFormat:@"%d",strongSelf.badgeCount] animated:YES];
         }
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:downButton];
