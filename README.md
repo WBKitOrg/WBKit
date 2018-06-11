@@ -1,6 +1,8 @@
 # WBKit
 WBKit IOS framework
 ----------------------------
+* 2018.6.11
+增加`NSObjectSafe`，解决一些比如空对象引起的崩溃
 
 * 2018.3.9
 增加`UIGestureRecognizer+BlockedAction`，支持UIGestureRecognizer的事件block化
