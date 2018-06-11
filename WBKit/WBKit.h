@@ -53,6 +53,7 @@
 #import "WBModuleManager.h"
 #import "WBWebBridge.h"
 #import "WBSerialAction.h"
+#import "NSObjectSafe.h"
 
 #import "WBAppHelper.h"
 #import "WBGCD.h"

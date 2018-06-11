@@ -38,6 +38,8 @@
 		2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7616582032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D76165B2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7616592032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m */; };
 		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
+		2DAA5F2F20CE90800049D80E /* NSObjectSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAA5F2D20CE90800049D80E /* NSObjectSafe.h */; };
+		2DAA5F3020CE90800049D80E /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA5F2E20CE90800049D80E /* NSObjectSafe.m */; };
 		2DAAAE2F201F1CFE005F68D8 /* UITableViewController+StaticHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAAAE2D201F1CFE005F68D8 /* UITableViewController+StaticHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAAAE30201F1CFE005F68D8 /* UITableViewController+StaticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE2E201F1CFE005F68D8 /* UITableViewController+StaticHelper.m */; };
 		2DAAAE33201F2338005F68D8 /* UITableViewCell+StaticHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAAAE31201F2338005F68D8 /* UITableViewCell+StaticHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -223,6 +225,8 @@
 		2D7616592032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FindCurrentHelper.m"; sourceTree = "<group>"; };
 		2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+WBAdditions.h"; sourceTree = "<group>"; };
 		2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WBAdditions.m"; sourceTree = "<group>"; };
+		2DAA5F2D20CE90800049D80E /* NSObjectSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectSafe.h; sourceTree = "<group>"; };
+		2DAA5F2E20CE90800049D80E /* NSObjectSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectSafe.m; sourceTree = "<group>"; };
 		2DAAAE2D201F1CFE005F68D8 /* UITableViewController+StaticHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+StaticHelper.h"; sourceTree = "<group>"; };
 		2DAAAE2E201F1CFE005F68D8 /* UITableViewController+StaticHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+StaticHelper.m"; sourceTree = "<group>"; };
 		2DAAAE31201F2338005F68D8 /* UITableViewCell+StaticHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+StaticHelper.h"; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 		2D3323DF1FCC506100DA53A9 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				2DAA5F2C20CE906B0049D80E /* NSObjectSafe */,
 				2D1D88F2202985E600B1A778 /* WBSerialAction */,
 				2D4100CB201624960009229E /* WBWebBridge */,
 				2DCD824E1FF3C65F004721DF /* WBModuleManager */,
@@ -566,6 +571,15 @@
 			path = WBFlyClipDemo;
 			sourceTree = "<group>";
 		};
+		2DAA5F2C20CE906B0049D80E /* NSObjectSafe */ = {
+			isa = PBXGroup;
+			children = (
+				2DAA5F2D20CE90800049D80E /* NSObjectSafe.h */,
+				2DAA5F2E20CE90800049D80E /* NSObjectSafe.m */,
+			);
+			path = NSObjectSafe;
+			sourceTree = "<group>";
+		};
 		2DAAAE38201F5D2B005F68D8 /* WBStaticTableViewHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +679,7 @@
 				2DBD7D0D1FF5E32300D1A967 /* WBAppHelper.h in Headers */,
 				2DAAAE3B201F5D80005F68D8 /* WBStaticTableViewHelper.h in Headers */,
 				2DAAAE2F201F1CFE005F68D8 /* UITableViewController+StaticHelper.h in Headers */,
+				2DAA5F2F20CE90800049D80E /* NSObjectSafe.h in Headers */,
 				2DAAAE33201F2338005F68D8 /* UITableViewCell+StaticHelper.h in Headers */,
 				2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
@@ -796,6 +811,7 @@
 				2DF1C58D1FF4F956007BB079 /* UIView+WBAnimationHelp.m in Sources */,
 				2DF1C5891FF4F941007BB079 /* NSDictionary+MutableCopy.m in Sources */,
 				2DAAAE34201F2338005F68D8 /* UITableViewCell+StaticHelper.m in Sources */,
+				2DAA5F3020CE90800049D80E /* NSObjectSafe.m in Sources */,
 				2DCD82551FF3C80B004721DF /* WBModuleManager.m in Sources */,
 				2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */,
 				2DF1C59B1FF4F9FB007BB079 /* NSObject+MessageRequest.m in Sources */,
