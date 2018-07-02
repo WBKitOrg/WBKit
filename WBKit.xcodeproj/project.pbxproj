@@ -38,7 +38,7 @@
 		2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7616582032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D76165B2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7616592032CE6200EDFCAB /* UIViewController+FindCurrentHelper.m */; };
 		2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */; };
-		2DAA5F2F20CE90800049D80E /* NSObjectSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAA5F2D20CE90800049D80E /* NSObjectSafe.h */; };
+		2DAA5F2F20CE90800049D80E /* NSObjectSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAA5F2D20CE90800049D80E /* NSObjectSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAA5F3020CE90800049D80E /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA5F2E20CE90800049D80E /* NSObjectSafe.m */; };
 		2DAAAE2F201F1CFE005F68D8 /* UITableViewController+StaticHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAAAE2D201F1CFE005F68D8 /* UITableViewController+StaticHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAAAE30201F1CFE005F68D8 /* UITableViewController+StaticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAAE2E201F1CFE005F68D8 /* UITableViewController+StaticHelper.m */; };
@@ -679,13 +679,13 @@
 				2DBD7D0D1FF5E32300D1A967 /* WBAppHelper.h in Headers */,
 				2DAAAE3B201F5D80005F68D8 /* WBStaticTableViewHelper.h in Headers */,
 				2DAAAE2F201F1CFE005F68D8 /* UITableViewController+StaticHelper.h in Headers */,
-				2DAA5F2F20CE90800049D80E /* NSObjectSafe.h in Headers */,
 				2DAAAE33201F2338005F68D8 /* UITableViewCell+StaticHelper.h in Headers */,
 				2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
 				2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */,
 				2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */,
 				2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */,
+				2DAA5F2F20CE90800049D80E /* NSObjectSafe.h in Headers */,
 				2D3A3DD02052354F00A872DA /* UIGestureRecognizer+BlockedAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
