@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoStaticTableViewController : UITableViewController
+@interface DemoStaticTableViewController : WBStaticTableViewController
 
 @end

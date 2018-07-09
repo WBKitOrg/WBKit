@@ -1,15 +1,15 @@
 //
-//  UITableViewController+StaticHelper.h
+//  WBStaticTableViewController.h
 //  WBKit
 //
-//  Created by wangbo on 2018/1/29.
+//  Created by wangbo on 2018/7/9.
 //  Copyright © 2018年 wangbo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+StaticHelper.h"
 
-@interface UITableViewController (StaticHelper)
+@interface WBStaticTableViewController : UITableViewController
 
 /** @brief example:
  *  NSMutableArray *section1 = [NSMutableArray arrayWithCapacity:3];

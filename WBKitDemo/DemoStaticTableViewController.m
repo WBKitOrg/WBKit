@@ -164,4 +164,13 @@
     return cell;
 }
 
+#pragma mark - 支持重写Delegate&DataSource
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    NSLog(@"DemoStaticTableViewController-----Rewrite");
+//    return self.sections.count;
+//}
+
+
 @end

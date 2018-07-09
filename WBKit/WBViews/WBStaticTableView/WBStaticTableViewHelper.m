@@ -26,34 +26,34 @@
     return self;
 }
 
-#pragma mark - UITableViewDelegate & UITableViewDataSource
+#pragma mark - StaticTableProtocol
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)wb_staticTable_numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.sections.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)wb_staticTable_tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSArray *cells = self.sections[section];
     return cells.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)wb_staticTable_tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *cells = self.sections[indexPath.section];
     UITableViewCell *cell = cells[indexPath.row];
     return cell.cellHeight;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)wb_staticTable_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *cells = self.sections[indexPath.section];
     UITableViewCell *cell = cells[indexPath.row];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)wb_staticTable_tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *cells = self.sections[indexPath.section];
     UITableViewCell *cell = cells[indexPath.row];
