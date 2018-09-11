@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0722E69920245B45001700D1 /* UIButtonBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */; };
+		07EEDAC7214763890056F455 /* NSError+debugDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EEDAC5214763890056F455 /* NSError+debugDescription.h */; };
+		07EEDAC8214763890056F455 /* NSError+debugDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEDAC6214763890056F455 /* NSError+debugDescription.m */; };
 		07F220E62086D94B00CAB7E6 /* WBModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F220E52086D94B00CAB7E6 /* WBModelView.m */; };
 		07FE78A22085CAE7003680D7 /* DemoStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FE78A12085CAE7003680D7 /* DemoStaticTableViewController.m */; };
 		2D113C7920F394B100314E4A /* WBStaticTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D113C7720F394B100314E4A /* WBStaticTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -144,6 +146,8 @@
 		070065E61FF4AB6A0059B62E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0722E69720245B45001700D1 /* UIButtonBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonBadgeViewController.h; sourceTree = "<group>"; };
 		0722E69820245B45001700D1 /* UIButtonBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonBadgeViewController.m; sourceTree = "<group>"; };
+		07EEDAC5214763890056F455 /* NSError+debugDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+debugDescription.h"; sourceTree = "<group>"; };
+		07EEDAC6214763890056F455 /* NSError+debugDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+debugDescription.m"; sourceTree = "<group>"; };
 		07F220E42086D94B00CAB7E6 /* WBModelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBModelView.h; sourceTree = "<group>"; };
 		07F220E52086D94B00CAB7E6 /* WBModelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBModelView.m; sourceTree = "<group>"; };
 		07FE78A02085CAE7003680D7 /* DemoStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoStaticTableViewController.h; sourceTree = "<group>"; };
@@ -547,6 +551,8 @@
 				2D3324271FCFA93C00DA53A9 /* UIColor+WBAdditions.m */,
 				2DA4ED5A1FF0A3EC000F6F6D /* NSDate+WBAdditions.h */,
 				2DA4ED5B1FF0A3EC000F6F6D /* NSDate+WBAdditions.m */,
+				07EEDAC5214763890056F455 /* NSError+debugDescription.h */,
+				07EEDAC6214763890056F455 /* NSError+debugDescription.m */,
 			);
 			path = "Foundation+";
 			sourceTree = "<group>";
@@ -681,6 +687,7 @@
 				2DAAAE33201F2338005F68D8 /* UITableViewCell+StaticHelper.h in Headers */,
 				2D4AA679200861F800613341 /* UIControl+BlockedAction.h in Headers */,
 				2DBD7D0E1FF5E32300D1A967 /* WBGCD.h in Headers */,
+				07EEDAC7214763890056F455 /* NSError+debugDescription.h in Headers */,
 				2D300FAB2023128500CE4B73 /* UIView+BadgeHelper.h in Headers */,
 				2D1D88F52029862D00B1A778 /* WBSerialAction.h in Headers */,
 				2D76165A2032CE6200EDFCAB /* UIViewController+FindCurrentHelper.h in Headers */,
@@ -815,6 +822,7 @@
 				2D113C7A20F394B100314E4A /* WBStaticTableViewController.m in Sources */,
 				2DA4ED5C1FF0A3EC000F6F6D /* NSDate+WBAdditions.m in Sources */,
 				2DF1C59B1FF4F9FB007BB079 /* NSObject+MessageRequest.m in Sources */,
+				07EEDAC8214763890056F455 /* NSError+debugDescription.m in Sources */,
 				2DBB21551FF21BDA00687B53 /* NSMutableArray+Unretain.m in Sources */,
 				2D3323D01FCC4DAA00DA53A9 /* WBKit.m in Sources */,
 				2DF1C58E1FF4F95C007BB079 /* WBReloadScrollView.m in Sources */,
